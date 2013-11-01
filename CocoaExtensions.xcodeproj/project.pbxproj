@@ -12,18 +12,27 @@
 		6F3E250718228C2500C5566B /* CocoaExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E250618228C2500C5566B /* CocoaExtensions.m */; };
 		6F3E250E18228C2500C5566B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E250D18228C2500C5566B /* XCTest.framework */; };
 		6F3E250F18228C2500C5566B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FF18228C2500C5566B /* Foundation.framework */; };
-		6F3E251118228C2500C5566B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E251018228C2500C5566B /* UIKit.framework */; };
 		6F3E251418228C2500C5566B /* libCocoaExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FC18228C2500C5566B /* libCocoaExtensions.a */; };
 		6F3E251A18228C2500C5566B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F3E251818228C2500C5566B /* InfoPlist.strings */; };
-		6F3E252E18228C8D00C5566B /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E252718228C8D00C5566B /* NSArray+Extensions.m */; };
-		6F3E252F18228C8D00C5566B /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E252718228C8D00C5566B /* NSArray+Extensions.m */; };
-		6F3E253018228C8D00C5566B /* NSFetchRequest+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E252918228C8D00C5566B /* NSFetchRequest+Extensions.m */; };
-		6F3E253118228C8D00C5566B /* NSFetchRequest+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E252918228C8D00C5566B /* NSFetchRequest+Extensions.m */; };
-		6F3E253218228C8D00C5566B /* NSManagedObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E252B18228C8D00C5566B /* NSManagedObject+Extensions.m */; };
-		6F3E253318228C8D00C5566B /* NSManagedObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E252B18228C8D00C5566B /* NSManagedObject+Extensions.m */; };
-		6F3E253418228C8D00C5566B /* NSManagedObjectContext+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E252D18228C8D00C5566B /* NSManagedObjectContext+Extensions.m */; };
-		6F3E253518228C8D00C5566B /* NSManagedObjectContext+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E252D18228C8D00C5566B /* NSManagedObjectContext+Extensions.m */; };
 		6F3E25381822B34300C5566B /* NSArrayExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E25371822B34300C5566B /* NSArrayExtensionsTest.m */; };
+		6FC5E1CA18239EF100C15F70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC5E1C918239EF100C15F70 /* UIKit.framework */; };
+		6FC5E1CB18239F0100C15F70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC5E1C918239EF100C15F70 /* UIKit.framework */; };
+		6FC5E1E71823A0CC00C15F70 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1D41823A0CC00C15F70 /* UIImage+Alpha.m */; };
+		6FC5E1E81823A0CC00C15F70 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1D41823A0CC00C15F70 /* UIImage+Alpha.m */; };
+		6FC5E1EB1823A0CC00C15F70 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1D81823A0CC00C15F70 /* UIImage+Resize.m */; };
+		6FC5E1EC1823A0CC00C15F70 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1D81823A0CC00C15F70 /* UIImage+Resize.m */; };
+		6FC5E1ED1823A0CC00C15F70 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1DA1823A0CC00C15F70 /* UIImage+RoundedCorner.m */; };
+		6FC5E1EE1823A0CC00C15F70 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1DA1823A0CC00C15F70 /* UIImage+RoundedCorner.m */; };
+		6FC5E1EF1823A0CC00C15F70 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1DC1823A0CC00C15F70 /* UIView+Extensions.m */; };
+		6FC5E1F01823A0CC00C15F70 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1DC1823A0CC00C15F70 /* UIView+Extensions.m */; };
+		6FC5E1F11823A0CC00C15F70 /* NSFetchRequest+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1DF1823A0CC00C15F70 /* NSFetchRequest+Extensions.m */; };
+		6FC5E1F21823A0CC00C15F70 /* NSFetchRequest+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1DF1823A0CC00C15F70 /* NSFetchRequest+Extensions.m */; };
+		6FC5E1F31823A0CC00C15F70 /* NSManagedObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1E11823A0CC00C15F70 /* NSManagedObject+Extensions.m */; };
+		6FC5E1F41823A0CC00C15F70 /* NSManagedObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1E11823A0CC00C15F70 /* NSManagedObject+Extensions.m */; };
+		6FC5E1F51823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1E31823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m */; };
+		6FC5E1F61823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1E31823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m */; };
+		6FC5E1F71823A0CC00C15F70 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1E61823A0CC00C15F70 /* NSArray+Extensions.m */; };
+		6FC5E1F81823A0CC00C15F70 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1E61823A0CC00C15F70 /* NSArray+Extensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,15 +69,25 @@
 		6F3E251018228C2500C5566B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		6F3E251718228C2500C5566B /* CocoaExtensionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaExtensionsTests-Info.plist"; sourceTree = "<group>"; };
 		6F3E251918228C2500C5566B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6F3E252618228C8D00C5566B /* NSArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSArray+Extensions.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		6F3E252718228C8D00C5566B /* NSArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSArray+Extensions.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		6F3E252818228C8D00C5566B /* NSFetchRequest+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSFetchRequest+Extensions.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		6F3E252918228C8D00C5566B /* NSFetchRequest+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSFetchRequest+Extensions.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		6F3E252A18228C8D00C5566B /* NSManagedObject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSManagedObject+Extensions.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		6F3E252B18228C8D00C5566B /* NSManagedObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSManagedObject+Extensions.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		6F3E252C18228C8D00C5566B /* NSManagedObjectContext+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSManagedObjectContext+Extensions.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		6F3E252D18228C8D00C5566B /* NSManagedObjectContext+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSManagedObjectContext+Extensions.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		6F3E25371822B34300C5566B /* NSArrayExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayExtensionsTest.m; path = Categories/NSArrayExtensionsTest.m; sourceTree = "<group>"; };
+		6FC5E1C918239EF100C15F70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6FC5E1CC18239F2600C15F70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6FC5E1D31823A0CC00C15F70 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		6FC5E1D41823A0CC00C15F70 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		6FC5E1D71823A0CC00C15F70 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		6FC5E1D81823A0CC00C15F70 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		6FC5E1D91823A0CC00C15F70 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		6FC5E1DA1823A0CC00C15F70 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		6FC5E1DB1823A0CC00C15F70 /* UIView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensions.h"; sourceTree = "<group>"; };
+		6FC5E1DC1823A0CC00C15F70 /* UIView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
+		6FC5E1DE1823A0CC00C15F70 /* NSFetchRequest+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchRequest+Extensions.h"; sourceTree = "<group>"; };
+		6FC5E1DF1823A0CC00C15F70 /* NSFetchRequest+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchRequest+Extensions.m"; sourceTree = "<group>"; };
+		6FC5E1E01823A0CC00C15F70 /* NSManagedObject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Extensions.h"; sourceTree = "<group>"; };
+		6FC5E1E11823A0CC00C15F70 /* NSManagedObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Extensions.m"; sourceTree = "<group>"; };
+		6FC5E1E21823A0CC00C15F70 /* NSManagedObjectContext+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Extensions.h"; sourceTree = "<group>"; };
+		6FC5E1E31823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Extensions.m"; sourceTree = "<group>"; };
+		6FC5E1E51823A0CC00C15F70 /* NSArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extensions.h"; sourceTree = "<group>"; };
+		6FC5E1E61823A0CC00C15F70 /* NSArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC5E1CA18239EF100C15F70 /* UIKit.framework in Frameworks */,
 				6F3E250018228C2500C5566B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,8 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC5E1CB18239F0100C15F70 /* UIKit.framework in Frameworks */,
 				6F3E250E18228C2500C5566B /* XCTest.framework in Frameworks */,
-				6F3E251118228C2500C5566B /* UIKit.framework in Frameworks */,
 				6F3E250F18228C2500C5566B /* Foundation.framework in Frameworks */,
 				6F3E251418228C2500C5566B /* libCocoaExtensions.a in Frameworks */,
 			);
@@ -116,6 +136,8 @@
 		6F3E24FE18228C2500C5566B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6FC5E1CC18239F2600C15F70 /* CoreGraphics.framework */,
+				6FC5E1C918239EF100C15F70 /* UIKit.framework */,
 				6F3E24FF18228C2500C5566B /* Foundation.framework */,
 				6F3E250D18228C2500C5566B /* XCTest.framework */,
 				6F3E251018228C2500C5566B /* UIKit.framework */,
@@ -163,14 +185,9 @@
 		6F3E252518228C8D00C5566B /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				6F3E252618228C8D00C5566B /* NSArray+Extensions.h */,
-				6F3E252718228C8D00C5566B /* NSArray+Extensions.m */,
-				6F3E252818228C8D00C5566B /* NSFetchRequest+Extensions.h */,
-				6F3E252918228C8D00C5566B /* NSFetchRequest+Extensions.m */,
-				6F3E252A18228C8D00C5566B /* NSManagedObject+Extensions.h */,
-				6F3E252B18228C8D00C5566B /* NSManagedObject+Extensions.m */,
-				6F3E252C18228C8D00C5566B /* NSManagedObjectContext+Extensions.h */,
-				6F3E252D18228C8D00C5566B /* NSManagedObjectContext+Extensions.m */,
+				6FC5E1D21823A0CC00C15F70 /* UIKit */,
+				6FC5E1DD1823A0CC00C15F70 /* CoreData */,
+				6FC5E1E41823A0CC00C15F70 /* Foundation */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -181,6 +198,43 @@
 				6F3E25371822B34300C5566B /* NSArrayExtensionsTest.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		6FC5E1D21823A0CC00C15F70 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6FC5E1D31823A0CC00C15F70 /* UIImage+Alpha.h */,
+				6FC5E1D41823A0CC00C15F70 /* UIImage+Alpha.m */,
+				6FC5E1D71823A0CC00C15F70 /* UIImage+Resize.h */,
+				6FC5E1D81823A0CC00C15F70 /* UIImage+Resize.m */,
+				6FC5E1D91823A0CC00C15F70 /* UIImage+RoundedCorner.h */,
+				6FC5E1DA1823A0CC00C15F70 /* UIImage+RoundedCorner.m */,
+				6FC5E1DB1823A0CC00C15F70 /* UIView+Extensions.h */,
+				6FC5E1DC1823A0CC00C15F70 /* UIView+Extensions.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		6FC5E1DD1823A0CC00C15F70 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6FC5E1DE1823A0CC00C15F70 /* NSFetchRequest+Extensions.h */,
+				6FC5E1DF1823A0CC00C15F70 /* NSFetchRequest+Extensions.m */,
+				6FC5E1E01823A0CC00C15F70 /* NSManagedObject+Extensions.h */,
+				6FC5E1E11823A0CC00C15F70 /* NSManagedObject+Extensions.m */,
+				6FC5E1E21823A0CC00C15F70 /* NSManagedObjectContext+Extensions.h */,
+				6FC5E1E31823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		6FC5E1E41823A0CC00C15F70 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				6FC5E1E51823A0CC00C15F70 /* NSArray+Extensions.h */,
+				6FC5E1E61823A0CC00C15F70 /* NSArray+Extensions.m */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,11 +318,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F3E252E18228C8D00C5566B /* NSArray+Extensions.m in Sources */,
-				6F3E253418228C8D00C5566B /* NSManagedObjectContext+Extensions.m in Sources */,
-				6F3E253218228C8D00C5566B /* NSManagedObject+Extensions.m in Sources */,
-				6F3E253018228C8D00C5566B /* NSFetchRequest+Extensions.m in Sources */,
+				6FC5E1F11823A0CC00C15F70 /* NSFetchRequest+Extensions.m in Sources */,
+				6FC5E1F51823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m in Sources */,
+				6FC5E1F71823A0CC00C15F70 /* NSArray+Extensions.m in Sources */,
+				6FC5E1ED1823A0CC00C15F70 /* UIImage+RoundedCorner.m in Sources */,
+				6FC5E1EB1823A0CC00C15F70 /* UIImage+Resize.m in Sources */,
+				6FC5E1E71823A0CC00C15F70 /* UIImage+Alpha.m in Sources */,
+				6FC5E1EF1823A0CC00C15F70 /* UIView+Extensions.m in Sources */,
 				6F3E250718228C2500C5566B /* CocoaExtensions.m in Sources */,
+				6FC5E1F31823A0CC00C15F70 /* NSManagedObject+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +334,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F3E252F18228C8D00C5566B /* NSArray+Extensions.m in Sources */,
-				6F3E253518228C8D00C5566B /* NSManagedObjectContext+Extensions.m in Sources */,
-				6F3E253318228C8D00C5566B /* NSManagedObject+Extensions.m in Sources */,
-				6F3E253118228C8D00C5566B /* NSFetchRequest+Extensions.m in Sources */,
+				6FC5E1F21823A0CC00C15F70 /* NSFetchRequest+Extensions.m in Sources */,
+				6FC5E1F61823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m in Sources */,
+				6FC5E1F81823A0CC00C15F70 /* NSArray+Extensions.m in Sources */,
+				6FC5E1EE1823A0CC00C15F70 /* UIImage+RoundedCorner.m in Sources */,
+				6FC5E1EC1823A0CC00C15F70 /* UIImage+Resize.m in Sources */,
+				6FC5E1E81823A0CC00C15F70 /* UIImage+Alpha.m in Sources */,
+				6FC5E1F01823A0CC00C15F70 /* UIView+Extensions.m in Sources */,
 				6F3E25381822B34300C5566B /* NSArrayExtensionsTest.m in Sources */,
+				6FC5E1F41823A0CC00C15F70 /* NSManagedObject+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
