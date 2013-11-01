@@ -77,8 +77,7 @@
   if (results.count < 1)
     return nil;
   
-  NSLog(@"results; %@", results);
-  return nil; //[results objectAtIndex:0];
+  return [results objectAtIndex:0];
 }
 
 

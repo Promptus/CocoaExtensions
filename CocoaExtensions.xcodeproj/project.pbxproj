@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6F3E250018228C2500C5566B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FF18228C2500C5566B /* Foundation.framework */; };
 		6F3E250518228C2500C5566B /* CocoaExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6F3E250418228C2500C5566B /* CocoaExtensions.h */; };
-		6F3E250718228C2500C5566B /* CocoaExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E250618228C2500C5566B /* CocoaExtensions.m */; };
 		6F3E250E18228C2500C5566B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E250D18228C2500C5566B /* XCTest.framework */; };
 		6F3E250F18228C2500C5566B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FF18228C2500C5566B /* Foundation.framework */; };
 		6F3E251418228C2500C5566B /* libCocoaExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FC18228C2500C5566B /* libCocoaExtensions.a */; };
@@ -63,7 +62,6 @@
 		6F3E24FF18228C2500C5566B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6F3E250318228C2500C5566B /* CocoaExtensions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaExtensions-Prefix.pch"; sourceTree = "<group>"; };
 		6F3E250418228C2500C5566B /* CocoaExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaExtensions.h; sourceTree = "<group>"; };
-		6F3E250618228C2500C5566B /* CocoaExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CocoaExtensions.m; sourceTree = "<group>"; };
 		6F3E250C18228C2500C5566B /* CocoaExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3E250D18228C2500C5566B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6F3E251018228C2500C5566B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -150,7 +148,6 @@
 			children = (
 				6F3E252518228C8D00C5566B /* Categories */,
 				6F3E250418228C2500C5566B /* CocoaExtensions.h */,
-				6F3E250618228C2500C5566B /* CocoaExtensions.m */,
 				6F3E250218228C2500C5566B /* Supporting Files */,
 			);
 			path = CocoaExtensions;
@@ -325,7 +322,6 @@
 				6FC5E1EB1823A0CC00C15F70 /* UIImage+Resize.m in Sources */,
 				6FC5E1E71823A0CC00C15F70 /* UIImage+Alpha.m in Sources */,
 				6FC5E1EF1823A0CC00C15F70 /* UIView+Extensions.m in Sources */,
-				6F3E250718228C2500C5566B /* CocoaExtensions.m in Sources */,
 				6FC5E1F31823A0CC00C15F70 /* NSManagedObject+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
