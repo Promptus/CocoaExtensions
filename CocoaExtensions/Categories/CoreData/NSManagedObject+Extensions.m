@@ -49,10 +49,10 @@
   [req setIncludesPropertyValues:NO]; //only fetch the managedObjectID
 
   NSError * error = nil;
-  NSArray * cars = [context executeFetchRequest:req error:&error];
+  NSArray * objects = [context executeFetchRequest:req error:&error];
   //error handling goes here
-  for (NSManagedObject * car in cars) {
-    [context deleteObject:car];
+  for (NSManagedObject * obj in objects) {
+    [context deleteObject:obj];
   }
   NSError *saveError = nil;
   [context save:&saveError];
