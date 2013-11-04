@@ -20,7 +20,7 @@
 
 - (void)setUp {
   [super setUp];
-  sample = @[[NSNumber numberWithInt:1], [NSNumber numberWithInt:2]];
+  sample = @[@1, @2, @3, @4];
 }
 
 - (void)tearDown {
@@ -43,6 +43,15 @@
   }];
   XCTAssertTrue(result.count == (NSUInteger)1, @"");
   XCTAssertTrue([[result objectAtIndex:0] intValue] == 1, @"");
+}
+
+- (void)testReject {
+  NSArray * result = [sample reject:^(NSNumber * item) {
+    return (BOOL)([item intValue] % 2 == 0);
+  }];
+  XCTAssertTrue(result.count == (NSUInteger)2, @"");
+  XCTAssertTrue([[result objectAtIndex:0] intValue] == 1, @"");
+  XCTAssertTrue([[result objectAtIndex:1] intValue] == 3, @"");
 }
 
 @end
