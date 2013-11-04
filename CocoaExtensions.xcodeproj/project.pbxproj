@@ -14,6 +14,9 @@
 		6F3E251418228C2500C5566B /* libCocoaExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FC18228C2500C5566B /* libCocoaExtensions.a */; };
 		6F3E251A18228C2500C5566B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F3E251818228C2500C5566B /* InfoPlist.strings */; };
 		6F3E25381822B34300C5566B /* NSArrayExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E25371822B34300C5566B /* NSArrayExtensionsTest.m */; };
+		6FB82DD718283D71000FC603 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB82DD618283D71000FC603 /* NSString+Extensions.m */; };
+		6FB82DD818283D71000FC603 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB82DD618283D71000FC603 /* NSString+Extensions.m */; };
+		6FB82DDA18283F0D000FC603 /* NSStringExtensionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB82DD918283F0D000FC603 /* NSStringExtensionTest.m */; };
 		6FC5E1CA18239EF100C15F70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC5E1C918239EF100C15F70 /* UIKit.framework */; };
 		6FC5E1CB18239F0100C15F70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC5E1C918239EF100C15F70 /* UIKit.framework */; };
 		6FC5E1E71823A0CC00C15F70 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1D41823A0CC00C15F70 /* UIImage+Alpha.m */; };
@@ -68,6 +71,9 @@
 		6F3E251718228C2500C5566B /* CocoaExtensionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaExtensionsTests-Info.plist"; sourceTree = "<group>"; };
 		6F3E251918228C2500C5566B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6F3E25371822B34300C5566B /* NSArrayExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayExtensionsTest.m; path = Categories/NSArrayExtensionsTest.m; sourceTree = "<group>"; };
+		6FB82DD518283D71000FC603 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
+		6FB82DD618283D71000FC603 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		6FB82DD918283F0D000FC603 /* NSStringExtensionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSStringExtensionTest.m; path = Categories/NSStringExtensionTest.m; sourceTree = "<group>"; };
 		6FC5E1C918239EF100C15F70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6FC5E1CC18239F2600C15F70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6FC5E1D31823A0CC00C15F70 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				6F3E25371822B34300C5566B /* NSArrayExtensionsTest.m */,
+				6FB82DD918283F0D000FC603 /* NSStringExtensionTest.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -230,6 +237,8 @@
 			children = (
 				6FC5E1E51823A0CC00C15F70 /* NSArray+Extensions.h */,
 				6FC5E1E61823A0CC00C15F70 /* NSArray+Extensions.m */,
+				6FB82DD518283D71000FC603 /* NSString+Extensions.h */,
+				6FB82DD618283D71000FC603 /* NSString+Extensions.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -318,6 +327,7 @@
 				6FC5E1F11823A0CC00C15F70 /* NSFetchRequest+Extensions.m in Sources */,
 				6FC5E1F51823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m in Sources */,
 				6FC5E1F71823A0CC00C15F70 /* NSArray+Extensions.m in Sources */,
+				6FB82DD718283D71000FC603 /* NSString+Extensions.m in Sources */,
 				6FC5E1ED1823A0CC00C15F70 /* UIImage+RoundedCorner.m in Sources */,
 				6FC5E1EB1823A0CC00C15F70 /* UIImage+Resize.m in Sources */,
 				6FC5E1E71823A0CC00C15F70 /* UIImage+Alpha.m in Sources */,
@@ -335,6 +345,8 @@
 				6FC5E1F81823A0CC00C15F70 /* NSArray+Extensions.m in Sources */,
 				6FC5E1EE1823A0CC00C15F70 /* UIImage+RoundedCorner.m in Sources */,
 				6FC5E1EC1823A0CC00C15F70 /* UIImage+Resize.m in Sources */,
+				6FB82DD818283D71000FC603 /* NSString+Extensions.m in Sources */,
+				6FB82DDA18283F0D000FC603 /* NSStringExtensionTest.m in Sources */,
 				6FC5E1E81823A0CC00C15F70 /* UIImage+Alpha.m in Sources */,
 				6FC5E1F01823A0CC00C15F70 /* UIView+Extensions.m in Sources */,
 				6F3E25381822B34300C5566B /* NSArrayExtensionsTest.m in Sources */,

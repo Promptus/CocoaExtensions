@@ -47,7 +47,7 @@
   NSFetchRequest * req = [[NSFetchRequest alloc] init];
   [req setEntity:[NSEntityDescription entityForName:[self entityName] inManagedObjectContext:context]];
   [req setIncludesPropertyValues:NO]; //only fetch the managedObjectID
-  
+
   NSError * error = nil;
   NSArray * cars = [context executeFetchRequest:req error:&error];
   //error handling goes here
