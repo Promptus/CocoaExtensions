@@ -43,4 +43,20 @@
   return [NSString stringWithCString:object_getClassName(self) encoding:NSASCIIStringEncoding];
 }
 
++ (NSError*)deleteAll:(NSManagedObjectContext*)context {
+  NSFetchRequest * req = [[NSFetchRequest alloc] init];
+  [req setEntity:[NSEntityDescription entityForName:[self entityName] inManagedObjectContext:context]];
+  [req setIncludesPropertyValues:NO]; //only fetch the managedObjectID
+  
+  NSError * error = nil;
+  NSArray * cars = [context executeFetchRequest:req error:&error];
+  //error handling goes here
+  for (NSManagedObject * car in cars) {
+    [context deleteObject:car];
+  }
+  NSError *saveError = nil;
+  [context save:&saveError];
+  return error;
+}
+
 @end

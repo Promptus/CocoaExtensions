@@ -17,5 +17,6 @@
 + (NSArray*)all:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context;
 + (NSUInteger)count:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)contex;
 + (NSString *)entityName;
++ (NSError*)deleteAll:(NSManagedObjectContext*)context;
 
 @end
