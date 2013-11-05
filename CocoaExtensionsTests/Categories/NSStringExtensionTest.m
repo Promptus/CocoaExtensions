@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "NSString+Extensions.h"
+#import "XCTAssertMacroExtension.h"
 
 @interface NSStringExtensionTest : XCTestCase
 
@@ -26,14 +27,15 @@
 #pragma mark scan
 
 - (void)testScanSimpleString {
-  NSArray * matches = [@"This is a test string" scan:@"test"];
-  XCTAssertTrue([[matches objectAtIndex:0] isEqualToString:@"test"], @"");
+  NSArray * matches = [@"This is a test string" match:@"test"];
+  XCTAssertEqualStrings([matches objectAtIndex:0], @"test");
 }
 
-- (void)testScanForDigits {
-  NSArray * matches = [@"This is a 1 liner 4 u" scan:@"\\d"];
-  XCTAssertTrue([[matches objectAtIndex:0] isEqualToString:@"1"], @"");
-  XCTAssertTrue([[matches objectAtIndex:1] isEqualToString:@"4"], @"");
+- (void)testScanWithMatchGroups {
+  NSArray * matches = [@"This is a test string" match:@"is (.).*st(\\w+)"];
+  XCTAssertEqualStrings([matches objectAtIndex:0], @"is is a test string");
+  XCTAssertEqualStrings([matches objectAtIndex:1], @"i");
+  XCTAssertEqualStrings([matches objectAtIndex:2], @"ring");
 }
 
 @end

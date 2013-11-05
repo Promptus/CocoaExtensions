@@ -11,7 +11,7 @@
 
 @interface NSString (Extensions)
 
-- (NSArray*)scan:(NSString*)pattern;
-- (NSArray*)scan:(NSString*)pattern options:(NSRegularExpressionOptions)options;
+- (NSArray*)match:(NSString*)pattern;
+- (NSArray*)match:(NSString*)pattern options:(NSRegularExpressionOptions)options;
 
 @end

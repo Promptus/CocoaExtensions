@@ -61,6 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6F26AD471828DDDF0058E281 /* XCTAssertMacroExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTAssertMacroExtension.h; sourceTree = "<group>"; };
 		6F3E24FC18228C2500C5566B /* libCocoaExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3E24FF18228C2500C5566B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6F3E250318228C2500C5566B /* CocoaExtensions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaExtensions-Prefix.pch"; sourceTree = "<group>"; };
@@ -155,6 +156,7 @@
 				6F3E252518228C8D00C5566B /* Categories */,
 				6F3E250418228C2500C5566B /* CocoaExtensions.h */,
 				6F3E250218228C2500C5566B /* Supporting Files */,
+				6F26AD471828DDDF0058E281 /* XCTAssertMacroExtension.h */,
 			);
 			path = CocoaExtensions;
 			sourceTree = "<group>";
