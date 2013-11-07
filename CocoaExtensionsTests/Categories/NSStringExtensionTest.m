@@ -26,12 +26,12 @@
 
 #pragma mark match
 
-- (void)testScanSimpleString {
+- (void)testMatchSimpleString {
   NSArray * matches = [@"This is a test string" match:@"test"];
   XCTAssertEqualStrings([matches objectAtIndex:0], @"test");
 }
 
-- (void)testScanWithMatchGroups {
+- (void)testMatchWithMatchGroups {
   NSArray * matches = [@"This is a test string" match:@"is (.).*st(\\w+)"];
   XCTAssertEqualStrings([matches objectAtIndex:0], @"is is a test string");
   XCTAssertEqualStrings([matches objectAtIndex:1], @"i");
@@ -41,10 +41,10 @@
 #pragma mark scan
 
 - (void)testScanSimpleString {
-  NSArray * matches = [@"12 dsf45 safd 24325" match:@"(\\W+?|\\d+)"];
+  NSArray * matches = [@"12 dsf45 safd 24325" scan:@"(\\d+)"];
   XCTAssertEqualStrings([matches objectAtIndex:0], @"12");
-  XCTAssertEqualStrings([matches objectAtIndex:0], @"45");
-  XCTAssertEqualStrings([matches objectAtIndex:0], @"24325");
+  XCTAssertEqualStrings([matches objectAtIndex:1], @"45");
+  XCTAssertEqualStrings([matches objectAtIndex:2], @"24325");
 }
 
 @end
