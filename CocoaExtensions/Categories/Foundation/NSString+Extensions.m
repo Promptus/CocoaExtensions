@@ -10,6 +10,9 @@
 
 @implementation NSString (Extensions)
 
+
+#pragma mark Regular expressions
+
 - (NSArray*)match:(NSString*)pattern {
   return [self match:pattern options:0];
 }
@@ -23,6 +26,21 @@
       NSRange range = [result rangeAtIndex:i];
       [matches addObject:[self substringWithRange:range]];
     }
+  }
+  return matches;
+}
+
+- (NSArray*)scan:(NSString*)pattern {
+  return [self scan:pattern options:0];
+}
+
+- (NSArray*)scan:(NSString*)pattern options:(NSRegularExpressionOptions)options {
+  NSRegularExpression * regex = [NSRegularExpression regularExpressionWithPattern:pattern options:options error:nil];
+  NSArray * result = [regex matchesInString:self options:0 range:NSMakeRange(0, [self length])];
+  NSMutableArray * matches = [NSMutableArray arrayWithCapacity:result.count];
+  for (NSTextCheckingResult * match in result) {
+    NSRange range = [match range];
+    [matches addObject:[self substringWithRange:range]];
   }
   return matches;
 }

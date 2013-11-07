@@ -24,7 +24,7 @@
   [super tearDown];
 }
 
-#pragma mark scan
+#pragma mark match
 
 - (void)testScanSimpleString {
   NSArray * matches = [@"This is a test string" match:@"test"];
@@ -36,6 +36,15 @@
   XCTAssertEqualStrings([matches objectAtIndex:0], @"is is a test string");
   XCTAssertEqualStrings([matches objectAtIndex:1], @"i");
   XCTAssertEqualStrings([matches objectAtIndex:2], @"ring");
+}
+
+#pragma mark scan
+
+- (void)testScanSimpleString {
+  NSArray * matches = [@"12 dsf45 safd 24325" match:@"(\\W+?|\\d+)"];
+  XCTAssertEqualStrings([matches objectAtIndex:0], @"12");
+  XCTAssertEqualStrings([matches objectAtIndex:0], @"45");
+  XCTAssertEqualStrings([matches objectAtIndex:0], @"24325");
 }
 
 @end

@@ -11,7 +11,11 @@
 
 @interface NSString (Extensions)
 
+#pragma mark Regular expressions
 - (NSArray*)match:(NSString*)pattern;
 - (NSArray*)match:(NSString*)pattern options:(NSRegularExpressionOptions)options;
+- (NSArray*)scan:(NSString*)pattern;
+- (NSArray*)scan:(NSString*)pattern options:(NSRegularExpressionOptions)options;
+
 
 @end
