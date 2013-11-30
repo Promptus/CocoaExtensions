@@ -45,4 +45,22 @@
   return matches;
 }
 
++ (BOOL)isBlank:(NSString*)string {
+  return ![NSString isPresent:string];
+}
+
++ (BOOL)isPresent:(NSString*)string {
+  return [string isKindOfClass:[NSString class]] && ![string isEqualToString:@""];
+}
+
+- (BOOL)isBlank {
+  return [NSString isBlank:self];
+}
+
+- (BOOL)isPresent {
+  return [NSString isPresent:self];
+}
+
+
+
 @end

@@ -17,5 +17,9 @@
 - (NSArray*)scan:(NSString*)pattern;
 - (NSArray*)scan:(NSString*)pattern options:(NSRegularExpressionOptions)options;
 
++ (BOOL)isPresent:(NSString*)string;
++ (BOOL)isBlank:(NSString*)string;
+- (BOOL)isPresent;
+- (BOOL)isBlank;
 
 @end
