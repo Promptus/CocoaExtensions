@@ -1,0 +1,10 @@
+PODS:
+  - Reachability (3.1.1)
+
+DEPENDENCIES:
+  - Reachability (~> 3.1.1)
+
+SPEC CHECKSUMS:
+  Reachability: be4883bb93f31e38266ae3365e5600a317aae735
+
+COCOAPODS: 0.29.0

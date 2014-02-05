@@ -7,11 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Reachability.h"
 
 @interface ApplicationHelper : NSObject
 
+@property (readonly, nonatomic, strong) Reachability * reachability;
+
+# pragma mark Filesystem helpers
+
 + (NSURL *)documentsDirectory;
 
+# pragma mark Translation helpers
+
 + (NSString*)t:(NSString*)key;
+
+# pragma mark Reachability helpers
+
+- (BOOL)isReachable;
+- (BOOL)isUnreachable;
+- (BOOL)isReachableViaWWAN;
+- (BOOL)isReachableViaWiFi;
 
 @end

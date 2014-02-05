@@ -13,4 +13,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '6.0'
   s.source       = { :git => "https://github.com/Promptus/CocoaExtensions.git" }
   s.source_files = 'CocoaExtensions', 'CocoaExtensions/**/*.{h,m}'
+  
+  s.dependency   'Reachability', '~> 3.1.1'
 end
