@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F10993E18A2632F0026189C /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10993D18A2632F0026189C /* CoreDataManager.m */; };
+		6F10993F18A2632F0026189C /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10993D18A2632F0026189C /* CoreDataManager.m */; };
+		6F10994218A2668B0026189C /* CoreDataSqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10994118A2668B0026189C /* CoreDataSqliteManager.m */; };
+		6F10994318A2668B0026189C /* CoreDataSqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10994118A2668B0026189C /* CoreDataSqliteManager.m */; };
+		6F10994718A273F90026189C /* ApplicationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10994618A273F90026189C /* ApplicationHelper.m */; };
+		6F10994818A273F90026189C /* ApplicationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10994618A273F90026189C /* ApplicationHelper.m */; };
 		6F3E250018228C2500C5566B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FF18228C2500C5566B /* Foundation.framework */; };
 		6F3E250518228C2500C5566B /* CocoaExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6F3E250418228C2500C5566B /* CocoaExtensions.h */; };
 		6F3E250E18228C2500C5566B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E250D18228C2500C5566B /* XCTest.framework */; };
@@ -61,6 +67,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6F10993C18A2632F0026189C /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		6F10993D18A2632F0026189C /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		6F10994018A2668B0026189C /* CoreDataSqliteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataSqliteManager.h; sourceTree = "<group>"; };
+		6F10994118A2668B0026189C /* CoreDataSqliteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataSqliteManager.m; sourceTree = "<group>"; };
+		6F10994518A273F90026189C /* ApplicationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplicationHelper.h; path = Helpers/ApplicationHelper.h; sourceTree = "<group>"; };
+		6F10994618A273F90026189C /* ApplicationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicationHelper.m; path = Helpers/ApplicationHelper.m; sourceTree = "<group>"; };
 		6F26AD471828DDDF0058E281 /* XCTAssertMacroExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTAssertMacroExtension.h; sourceTree = "<group>"; };
 		6F3E24FC18228C2500C5566B /* libCocoaExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3E24FF18228C2500C5566B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -119,6 +131,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F10994418A273E20026189C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6F10994518A273F90026189C /* ApplicationHelper.h */,
+				6F10994618A273F90026189C /* ApplicationHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		6F3E24F318228C2500C5566B = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +174,7 @@
 		6F3E250118228C2500C5566B /* CocoaExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				6F10994418A273E20026189C /* Helpers */,
 				6F3E252518228C8D00C5566B /* Categories */,
 				6F3E250418228C2500C5566B /* CocoaExtensions.h */,
 				6F3E250218228C2500C5566B /* Supporting Files */,
@@ -224,6 +246,10 @@
 		6FC5E1DD1823A0CC00C15F70 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				6F10993C18A2632F0026189C /* CoreDataManager.h */,
+				6F10993D18A2632F0026189C /* CoreDataManager.m */,
+				6F10994018A2668B0026189C /* CoreDataSqliteManager.h */,
+				6F10994118A2668B0026189C /* CoreDataSqliteManager.m */,
 				6FC5E1DE1823A0CC00C15F70 /* NSFetchRequest+Extensions.h */,
 				6FC5E1DF1823A0CC00C15F70 /* NSFetchRequest+Extensions.m */,
 				6FC5E1E01823A0CC00C15F70 /* NSManagedObject+Extensions.h */,
@@ -328,8 +354,11 @@
 			files = (
 				6FC5E1F11823A0CC00C15F70 /* NSFetchRequest+Extensions.m in Sources */,
 				6FC5E1F51823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m in Sources */,
+				6F10994218A2668B0026189C /* CoreDataSqliteManager.m in Sources */,
+				6F10993E18A2632F0026189C /* CoreDataManager.m in Sources */,
 				6FC5E1F71823A0CC00C15F70 /* NSArray+Extensions.m in Sources */,
 				6FB82DD718283D71000FC603 /* NSString+Extensions.m in Sources */,
+				6F10994718A273F90026189C /* ApplicationHelper.m in Sources */,
 				6FC5E1ED1823A0CC00C15F70 /* UIImage+RoundedCorner.m in Sources */,
 				6FC5E1EB1823A0CC00C15F70 /* UIImage+Resize.m in Sources */,
 				6FC5E1E71823A0CC00C15F70 /* UIImage+Alpha.m in Sources */,
@@ -346,8 +375,11 @@
 				6FC5E1F61823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m in Sources */,
 				6FC5E1F81823A0CC00C15F70 /* NSArray+Extensions.m in Sources */,
 				6FC5E1EE1823A0CC00C15F70 /* UIImage+RoundedCorner.m in Sources */,
+				6F10994818A273F90026189C /* ApplicationHelper.m in Sources */,
 				6FC5E1EC1823A0CC00C15F70 /* UIImage+Resize.m in Sources */,
 				6FB82DD818283D71000FC603 /* NSString+Extensions.m in Sources */,
+				6F10994318A2668B0026189C /* CoreDataSqliteManager.m in Sources */,
+				6F10993F18A2632F0026189C /* CoreDataManager.m in Sources */,
 				6FB82DDA18283F0D000FC603 /* NSStringExtensionTest.m in Sources */,
 				6FC5E1E81823A0CC00C15F70 /* UIImage+Alpha.m in Sources */,
 				6FC5E1F01823A0CC00C15F70 /* UIView+Extensions.m in Sources */,
