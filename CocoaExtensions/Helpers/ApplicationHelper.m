@@ -31,11 +31,15 @@
 
 # pragma mark Reachability helpers
 
-- (Reachability*)reachability {
+- (void)setupReachability {
   if (reachability == nil) {
     reachability = [Reachability reachabilityWithHostname:@"www.google.com"];
     [reachability startNotifier];
   }
+}
+
+- (Reachability*)reachability {
+  [self setupReachability];
   return reachability;
 }
 

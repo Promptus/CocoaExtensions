@@ -22,4 +22,6 @@
 - (BOOL)isPresent;
 - (BOOL)isBlank;
 
++ (NSString*)blankDefault:(id)value;
+
 @end

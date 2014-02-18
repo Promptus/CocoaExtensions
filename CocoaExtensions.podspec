@@ -6,13 +6,13 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                    A collection of Objective-C/Cocoa extension categories.
                    DESC
-
   s.homepage     = "http://github.com/Promptus/CocoaExtensions"
   s.license      = 'MIT'
   s.author       = { "Lars Kuhnt" => "lars.kuhnt@gmail.com" }
   s.platform     = :ios, '6.0'
   s.source       = { :git => "https://github.com/Promptus/CocoaExtensions.git" }
   s.source_files = 'CocoaExtensions', 'CocoaExtensions/**/*.{h,m}'
+  s.requires_arc = true
   
   s.dependency   'Reachability', '~> 3.1.1'
 end

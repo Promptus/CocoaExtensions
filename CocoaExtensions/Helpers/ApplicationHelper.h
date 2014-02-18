@@ -23,6 +23,7 @@
 
 # pragma mark Reachability helpers
 
+- (void)setupReachability;
 - (BOOL)isReachable;
 - (BOOL)isUnreachable;
 - (BOOL)isReachableViaWWAN;

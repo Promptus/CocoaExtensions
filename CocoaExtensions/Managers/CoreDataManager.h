@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "NSFileManager+DirectoryLocations.h"
 
 @interface CoreDataManager : NSObject
 
@@ -23,5 +24,7 @@
 - (void)save;
 - (NSManagedObjectContext *)createManagedObjectContext;
 - (NSPersistentStoreCoordinator*)createPersistentStoreCoordinator:(NSURL*)storeURL;
+
++ (NSURL*)storePath:(NSString*)name;
 
 @end

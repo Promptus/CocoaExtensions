@@ -61,6 +61,9 @@
   return [NSString isPresent:self];
 }
 
++ (NSString*)blankDefault:(id)value {
+  return [value isKindOfClass:[NSString class]] ? value : @"";
+}
 
 
 @end

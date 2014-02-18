@@ -84,8 +84,7 @@
     return persistentStoreCoordinator;
   }
   
-  NSURL * documentsDirectoryURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-  NSURL *storeURL = [documentsDirectoryURL URLByAppendingPathComponent:[persistentStoreName stringByAppendingString:@".sqlite"]];
+  NSURL *storeURL = [[self class] storePath:persistentStoreName];
   
   persistentStoreCoordinator = [self createPersistentStoreCoordinator:storeURL];
   
@@ -96,5 +95,10 @@
   @throw @"Use a subclass";
 }
 
++ (NSURL*)storePath:(NSString*)name {
+  NSString * applicationSupportDirectory = [[NSFileManager defaultManager] applicationSupportDirectory];
+  NSURL * applicationSupportDirectoryURL = [NSURL fileURLWithPath:applicationSupportDirectory];
+  return [applicationSupportDirectoryURL URLByAppendingPathComponent:[name stringByAppendingString:@".sqlite"]];
+}
 
 @end
