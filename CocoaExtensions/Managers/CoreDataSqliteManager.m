@@ -20,6 +20,7 @@
   NSDictionary *currentMetadata = [NSPersistentStoreCoordinator metadataForPersistentStoreOfType:NSSQLiteStoreType
                                                                                            URL:storeURL
                                                                                          error:&error];
+  
   if (![self.managedObjectModel isConfiguration:nil compatibleWithStoreMetadata:currentMetadata]) {
     [[NSFileManager defaultManager] removeItemAtURL:storeURL error:&error];
   }

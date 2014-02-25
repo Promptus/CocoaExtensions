@@ -27,7 +27,11 @@
 }
 
 - (id)initWithStoreName:(NSString*)storeName {
-  return [self initWithStoreName:storeName configuartion:nil options:nil];
+  NSDictionary *options = @{
+    NSMigratePersistentStoresAutomaticallyOption : @YES,
+    NSInferMappingModelAutomaticallyOption : @YES
+  };
+  return [self initWithStoreName:storeName configuartion:nil options:options];
 }
 
 - (void)save {

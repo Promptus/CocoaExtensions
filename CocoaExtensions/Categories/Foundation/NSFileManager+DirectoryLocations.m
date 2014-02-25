@@ -150,4 +150,26 @@ NSString * const DirectoryLocationDomain = @"DirectoryLocationDomain";
 	return result;
 }
 
+//
+// applicationSupportDirectory
+//
+// Returns the path to the applicationSupportDirectory (creating it if it doesn't
+// exist).
+//
+- (NSString *)documentsDirectory
+{
+	NSError *error;
+	NSString *result =
+  [self
+   findOrCreateDirectory:NSDocumentDirectory
+   inDomain:NSUserDomainMask
+   appendPathComponent:nil
+   error:&error];
+	if (!result)
+	{
+		NSLog(@"Unable to find or create application support directory:\n%@", error);
+	}
+	return result;
+}
+
 @end

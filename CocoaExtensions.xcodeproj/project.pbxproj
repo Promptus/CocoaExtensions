@@ -15,6 +15,10 @@
 		6F10995418A2886D0026189C /* CoreDataSqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10995018A2886D0026189C /* CoreDataSqliteManager.m */; };
 		6F10995718A288830026189C /* ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10995618A288830026189C /* ReachabilityManager.m */; };
 		6F10995818A288830026189C /* ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10995618A288830026189C /* ReachabilityManager.m */; };
+		6F1C4F8518BCC80A005FC6DE /* NSNumber+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8418BCC80A005FC6DE /* NSNumber+Extensions.m */; };
+		6F1C4F8618BCC80A005FC6DE /* NSNumber+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8418BCC80A005FC6DE /* NSNumber+Extensions.m */; };
+		6F1C4F8D18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8C18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m */; };
+		6F1C4F8E18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8C18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m */; };
 		6F3E250018228C2500C5566B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FF18228C2500C5566B /* Foundation.framework */; };
 		6F3E250518228C2500C5566B /* CocoaExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6F3E250418228C2500C5566B /* CocoaExtensions.h */; };
 		6F3E250E18228C2500C5566B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E250D18228C2500C5566B /* XCTest.framework */; };
@@ -79,6 +83,10 @@
 		6F10995018A2886D0026189C /* CoreDataSqliteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataSqliteManager.m; path = Managers/CoreDataSqliteManager.m; sourceTree = "<group>"; };
 		6F10995518A288830026189C /* ReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReachabilityManager.h; path = Managers/ReachabilityManager.h; sourceTree = "<group>"; };
 		6F10995618A288830026189C /* ReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReachabilityManager.m; path = Managers/ReachabilityManager.m; sourceTree = "<group>"; };
+		6F1C4F8318BCC80A005FC6DE /* NSNumber+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Extensions.h"; sourceTree = "<group>"; };
+		6F1C4F8418BCC80A005FC6DE /* NSNumber+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Extensions.m"; sourceTree = "<group>"; };
+		6F1C4F8B18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DirectoryLocations.h"; sourceTree = "<group>"; };
+		6F1C4F8C18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DirectoryLocations.m"; sourceTree = "<group>"; };
 		6F26AD471828DDDF0058E281 /* XCTAssertMacroExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTAssertMacroExtension.h; sourceTree = "<group>"; };
 		6F3E24FC18228C2500C5566B /* libCocoaExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3E24FF18228C2500C5566B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -283,8 +291,12 @@
 		6FC5E1E41823A0CC00C15F70 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				6F1C4F8B18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.h */,
 				6FC5E1E51823A0CC00C15F70 /* NSArray+Extensions.h */,
 				6FC5E1E61823A0CC00C15F70 /* NSArray+Extensions.m */,
+				6F1C4F8C18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m */,
+				6F1C4F8318BCC80A005FC6DE /* NSNumber+Extensions.h */,
+				6F1C4F8418BCC80A005FC6DE /* NSNumber+Extensions.m */,
 				6FB82DD518283D71000FC603 /* NSString+Extensions.h */,
 				6FB82DD618283D71000FC603 /* NSString+Extensions.m */,
 			);
@@ -412,11 +424,13 @@
 				6F10995318A2886D0026189C /* CoreDataSqliteManager.m in Sources */,
 				6FC5E1F71823A0CC00C15F70 /* NSArray+Extensions.m in Sources */,
 				6FB82DD718283D71000FC603 /* NSString+Extensions.m in Sources */,
+				6F1C4F8518BCC80A005FC6DE /* NSNumber+Extensions.m in Sources */,
 				6F10994718A273F90026189C /* ApplicationHelper.m in Sources */,
 				6F10995718A288830026189C /* ReachabilityManager.m in Sources */,
 				6F10995118A2886D0026189C /* CoreDataManager.m in Sources */,
 				6FC5E1ED1823A0CC00C15F70 /* UIImage+RoundedCorner.m in Sources */,
 				6FC5E1EB1823A0CC00C15F70 /* UIImage+Resize.m in Sources */,
+				6F1C4F8D18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m in Sources */,
 				6FC5E1E71823A0CC00C15F70 /* UIImage+Alpha.m in Sources */,
 				6FC5E1EF1823A0CC00C15F70 /* UIView+Extensions.m in Sources */,
 				6FC5E1F31823A0CC00C15F70 /* NSManagedObject+Extensions.m in Sources */,
@@ -432,10 +446,12 @@
 				6FC5E1F61823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m in Sources */,
 				6FC5E1F81823A0CC00C15F70 /* NSArray+Extensions.m in Sources */,
 				6FC5E1EE1823A0CC00C15F70 /* UIImage+RoundedCorner.m in Sources */,
+				6F1C4F8618BCC80A005FC6DE /* NSNumber+Extensions.m in Sources */,
 				6F10994818A273F90026189C /* ApplicationHelper.m in Sources */,
 				6F10995818A288830026189C /* ReachabilityManager.m in Sources */,
 				6F10995418A2886D0026189C /* CoreDataSqliteManager.m in Sources */,
 				6FC5E1EC1823A0CC00C15F70 /* UIImage+Resize.m in Sources */,
+				6F1C4F8E18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m in Sources */,
 				6FB82DD818283D71000FC603 /* NSString+Extensions.m in Sources */,
 				6FB82DDA18283F0D000FC603 /* NSStringExtensionTest.m in Sources */,
 				6FC5E1E81823A0CC00C15F70 /* UIImage+Alpha.m in Sources */,
