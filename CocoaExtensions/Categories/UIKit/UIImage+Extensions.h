@@ -1,10 +1,19 @@
-// UIImage+Resize.h
-// Created by Trevor Harmon on 8/5/09.
+// UIImage+Extensions.h
+// Created by Trevor Harmon on 9/20/09.
 // Free for personal or commercial use, with or without modification.
 // No warranty is expressed or implied.
 
-// Extends the UIImage class to support resizing/cropping
-@interface UIImage (Resize)
+// Helper methods for adding an alpha layer to an image
+@interface UIImage (Extensions)
+
+#pragma mark Alpha
+
+- (BOOL)hasAlpha;
+- (UIImage *)imageWithAlpha;
+- (UIImage *)transparentBorderImage:(NSUInteger)borderSize;
+
+#pragma mark Resize
+
 - (UIImage *)croppedImage:(CGRect)bounds;
 - (UIImage *)thumbnailImage:(NSInteger)thumbnailSize
           transparentBorder:(NSUInteger)borderSize
@@ -15,4 +24,9 @@
 - (UIImage *)resizedImageWithContentMode:(UIViewContentMode)contentMode
                                   bounds:(CGSize)bounds
                     interpolationQuality:(CGInterpolationQuality)quality;
+
+#pragma mark RoundedCorner
+
+- (UIImage *)roundedCornerImage:(NSInteger)cornerSize borderSize:(NSInteger)borderSize;
+
 @end

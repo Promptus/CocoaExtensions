@@ -11,9 +11,9 @@
 #import "NSString+Extensions.h"
 
 // UIKit Extensions
-#import "UIImage+Alpha.h"
-#import "UIImage+Resize.h"
-#import "UIImage+RoundedCorner.h"
+#import "UIImage+Extensions.h"
+#import "UIButton+Extensions.h"
+#import "UIColor+Extensions.h"
 #import "UIView+Extensions.h"
 
 // CoreData Extensions
