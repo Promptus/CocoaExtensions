@@ -43,6 +43,7 @@
         i++;
       }
     }
+    self.target.userInteractionEnabled = NO;
   }
   return self;
 }

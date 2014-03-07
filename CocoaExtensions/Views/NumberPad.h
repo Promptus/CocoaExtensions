@@ -12,7 +12,7 @@
 
 @interface NumberPad : UIControl
 
-@property (nonatomic, assign) IBOutlet UILabel * target;
+@property (nonatomic, assign) IBOutlet UITextField * target;
 @property (nonatomic, strong) NSNumberFormatter * formatter;
 
 - (void)buttonTapped:(id)sender;
