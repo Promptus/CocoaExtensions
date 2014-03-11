@@ -10,7 +10,7 @@
 
 @implementation NSNumber (Extensions)
 
--(NSString *)formattedEuro {
+- (NSString *)formattedEuro {
   static NSNumberFormatter *formatter;
   if (formatter == nil) {
     formatter = [[NSNumberFormatter alloc] init];
@@ -20,6 +20,11 @@
     formatter.positiveFormat = @"#,##0.00 €";
   }
   return [formatter stringFromNumber:self];
+}
+
+- (NSDecimalNumber*)decimalNumberDividedByFloat:(float)divider {
+  NSDecimal decimal = [[NSNumber numberWithFloat:[self integerValue]/divider] decimalValue];
+  return [NSDecimalNumber decimalNumberWithDecimal:decimal];
 }
 
 @end

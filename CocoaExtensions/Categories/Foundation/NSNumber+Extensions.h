@@ -11,5 +11,6 @@
 @interface NSNumber (Extensions)
 
 - (NSString *)formattedEuro;
+- (NSDecimalNumber*)decimalNumberDividedByFloat:(float)divider;
 
 @end

@@ -17,6 +17,7 @@
 		6F1C4F8618BCC80A005FC6DE /* NSNumber+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8418BCC80A005FC6DE /* NSNumber+Extensions.m */; };
 		6F1C4F8D18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8C18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m */; };
 		6F1C4F8E18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8C18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m */; };
+		6F35B7C018CF474F0008F857 /* NSDecimalNumber+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F35B7BF18CF474F0008F857 /* NSDecimalNumber+Extensions.m */; };
 		6F3E250018228C2500C5566B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FF18228C2500C5566B /* Foundation.framework */; };
 		6F3E250518228C2500C5566B /* CocoaExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6F3E250418228C2500C5566B /* CocoaExtensions.h */; };
 		6F3E250E18228C2500C5566B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E250D18228C2500C5566B /* XCTest.framework */; };
@@ -84,6 +85,8 @@
 		6F1C4F8B18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DirectoryLocations.h"; sourceTree = "<group>"; };
 		6F1C4F8C18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DirectoryLocations.m"; sourceTree = "<group>"; };
 		6F26AD471828DDDF0058E281 /* XCTAssertMacroExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTAssertMacroExtension.h; sourceTree = "<group>"; };
+		6F35B7BE18CF474F0008F857 /* NSDecimalNumber+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Extensions.h"; sourceTree = "<group>"; };
+		6F35B7BF18CF474F0008F857 /* NSDecimalNumber+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Extensions.m"; sourceTree = "<group>"; };
 		6F3E24FC18228C2500C5566B /* libCocoaExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3E24FF18228C2500C5566B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6F3E250318228C2500C5566B /* CocoaExtensions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaExtensions-Prefix.pch"; sourceTree = "<group>"; };
@@ -295,16 +298,18 @@
 		6FC5E1E41823A0CC00C15F70 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				6F1C4F8B18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.h */,
 				6FC5E1E51823A0CC00C15F70 /* NSArray+Extensions.h */,
 				6FC5E1E61823A0CC00C15F70 /* NSArray+Extensions.m */,
+				6FC29E0118C0E6C9000B59FD /* NSDate+Extensions.h */,
+				6FC29E0218C0E6C9000B59FD /* NSDate+Extensions.m */,
+				6F35B7BE18CF474F0008F857 /* NSDecimalNumber+Extensions.h */,
+				6F35B7BF18CF474F0008F857 /* NSDecimalNumber+Extensions.m */,
+				6F1C4F8B18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.h */,
 				6F1C4F8C18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m */,
 				6F1C4F8318BCC80A005FC6DE /* NSNumber+Extensions.h */,
 				6F1C4F8418BCC80A005FC6DE /* NSNumber+Extensions.m */,
 				6FB82DD518283D71000FC603 /* NSString+Extensions.h */,
 				6FB82DD618283D71000FC603 /* NSString+Extensions.m */,
-				6FC29E0118C0E6C9000B59FD /* NSDate+Extensions.h */,
-				6FC29E0218C0E6C9000B59FD /* NSDate+Extensions.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -450,6 +455,7 @@
 				6FF65EA318C8745100A5A2B5 /* UIColor+Extensions.m in Sources */,
 				6FC5E1E71823A0CC00C15F70 /* UIImage+Extensions.m in Sources */,
 				6FC5E1EF1823A0CC00C15F70 /* UIView+Extensions.m in Sources */,
+				6F35B7C018CF474F0008F857 /* NSDecimalNumber+Extensions.m in Sources */,
 				6FC5E1F31823A0CC00C15F70 /* NSManagedObject+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,8 @@
 // Foundation Extensions
 #import "NSArray+Extensions.h"
 #import "NSString+Extensions.h"
+#import "NSNumber+Extensions.h"
+#import "NSDecimalNumber+Extensions.h"
 
 // UIKit Extensions
 #import "UIImage+Extensions.h"

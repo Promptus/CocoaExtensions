@@ -12,8 +12,16 @@
 
 @interface NumberPad : UIControl
 
+@property (nonatomic, strong, readonly) NSString * string;
+
 @property (nonatomic, assign) IBOutlet UITextField * target;
-@property (nonatomic, strong) NSNumberFormatter * formatter;
+@property (nonatomic, strong) NSDecimalNumber * value;
+@property (nonatomic, strong) NSString * suffix;
+@property (nonatomic, strong) NSString * comma;
+@property (nonatomic, assign) NSUInteger maxScale;
+@property (nonatomic, strong) NSDecimalNumber * maxValue;
+@property (nonatomic, strong) NSDecimalNumber * minValue;
+@property (nonatomic, assign) BOOL shouldReset;
 
 - (void)buttonTapped:(id)sender;
 
