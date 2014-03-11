@@ -11,5 +11,10 @@
 @interface NSDecimalNumber (Extensions)
 
 - (NSDecimalNumber*)roundToScale:(NSUInteger)scale;
+- (NSDecimalNumber*)decimalNumberWithPercentage:(float)percent;
+- (NSDecimalNumber*)decimalNumberWithDiscountPercentage:(NSDecimalNumber *)discountPercentage;
+- (NSDecimalNumber*)decimalNumberWithDiscountPercentage:(NSDecimalNumber *)discountPercentage roundToScale:(NSUInteger)scale;
+- (NSDecimalNumber*)discountPercentageWithBaseValue:(NSDecimalNumber *)baseValue;
+- (NSDecimalNumber*)discountPercentageWithBaseValue:(NSDecimalNumber *)baseValue roundToScale:(NSUInteger)scale;
 
 @end
