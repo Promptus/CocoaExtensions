@@ -27,4 +27,16 @@
   return [NSDecimalNumber decimalNumberWithDecimal:decimal];
 }
 
+- (NSInteger)minutes {
+  return [self integerValue] * 60;
+}
+
+- (NSInteger)hours {
+  return [self minutes] * 60;
+}
+
+- (NSInteger)days {
+  return [self hours] * 24;
+}
+
 @end

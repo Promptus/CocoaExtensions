@@ -12,5 +12,8 @@
 
 - (NSString *)formattedEuro;
 - (NSDecimalNumber*)decimalNumberDividedByFloat:(float)divider;
+- (NSInteger)minutes;
+- (NSInteger)hours;
+- (NSInteger)days;
 
 @end

@@ -7,9 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSNumber+Extensions.h"
 
 @interface NSDate (Extensions)
 
-- (NSString *)format:(NSString *)format;
+- (NSDate *)advance:(NSInteger)seconds calendar:(NSCalendar*)calendar;
+- (NSDate *)yesterday:(NSCalendar*)calendar;
+- (NSDate *)tomorrow:(NSCalendar*)calendar;
+- (NSDate *)beginningOfWeek:(NSCalendar*)calendar;
+- (NSDate *)endOfWeek:(NSCalendar*)calendar;
+- (NSUInteger)calendarWeek:(NSCalendar *)calendar;
+- (NSUInteger)month:(NSCalendar *)calendar;
+- (NSUInteger)year:(NSCalendar *)calendar;
 
 @end
