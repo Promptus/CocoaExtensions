@@ -58,7 +58,7 @@
   NSNumber * weeksAgo = [NSNumber numberWithInt:halfNumberOfWeeks];
   NSDate * currentWeekDate = [[NSDate date] advance:[weeksAgo days] calendar:self.calendar];
   NSDate * lastWeekDate = currentWeekDate;
-  [weeks addObject:[self buildItemDictionary:currentWeekDate lastDate:currentWeekDate]];
+  [weeks addObject:[self buildItemDictionary:currentWeekDate lastDate:nil]];
   for (int i = 0; i < self.numberOfItems; i++) {
     currentWeekDate = [currentWeekDate advance:[@7 days] calendar:self.calendar];
     [weeks addObject:[self buildItemDictionary:currentWeekDate lastDate:lastWeekDate]];
