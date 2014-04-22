@@ -16,8 +16,12 @@
 - (NSDate *)tomorrow:(NSCalendar*)calendar;
 - (NSDate *)beginningOfWeek:(NSCalendar*)calendar;
 - (NSDate *)endOfWeek:(NSCalendar*)calendar;
+- (NSDate *)beginningOfDay:(NSCalendar*)calendar;
+- (NSDate *)endOfDay:(NSCalendar*)calendar;
 - (NSUInteger)calendarWeek:(NSCalendar *)calendar;
 - (NSUInteger)month:(NSCalendar *)calendar;
 - (NSUInteger)year:(NSCalendar *)calendar;
+- (BOOL)isToday:(NSCalendar *)calendar;
+- (BOOL)isTomorrow:(NSCalendar *)calendar;
 
 @end

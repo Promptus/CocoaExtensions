@@ -27,5 +27,7 @@
 - (void)load;
 - (NSDate *)getDate;
 - (void)scrollToCurrentWeek:(BOOL)animated;
+- (void)scrollToNextWeek:(BOOL)animated;
+- (void)scrollToPreviousWeek:(BOOL)animated;
 
 @end

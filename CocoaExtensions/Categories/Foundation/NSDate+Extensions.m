@@ -38,6 +38,20 @@
   return [beginningOfWeek dateByAddingTimeInterval:interval-1];
 }
 
+- (NSDate *)beginningOfDay:(NSCalendar*)calendar {
+  NSDate *beginningOfDay;
+  NSTimeInterval interval;
+  [calendar rangeOfUnit:NSDayCalendarUnit startDate:&beginningOfDay interval:&interval forDate:self];
+  return beginningOfDay;
+}
+
+- (NSDate *)endOfDay:(NSCalendar*)calendar {
+  NSDate *beginningOfDay;
+  NSTimeInterval interval;
+  [calendar rangeOfUnit:NSDayCalendarUnit startDate:&beginningOfDay interval:&interval forDate:self];
+  return [beginningOfDay dateByAddingTimeInterval:interval-1];
+}
+
 - (NSUInteger)calendarWeek:(NSCalendar *)calendar {
   NSDateComponents *comps = [calendar components:NSWeekdayCalendarUnit fromDate:self];
   return [comps weekday];
@@ -51,6 +65,24 @@
 - (NSUInteger)year:(NSCalendar *)calendar {
   NSDateComponents *comps = [calendar components:NSYearCalendarUnit fromDate:self];
   return [comps year];
+}
+
+- (BOOL)isToday:(NSCalendar *)calendar {
+  int mask = NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay;
+  NSDateComponents *components = [calendar components:(mask) fromDate:[NSDate date]];
+  NSDate *today = [calendar dateFromComponents:components];
+  components = [calendar components:(mask) fromDate:self];
+  NSDate *otherDate = [calendar dateFromComponents:components];
+  return [today isEqualToDate:otherDate];
+}
+
+-(BOOL)isTomorrow:(NSCalendar *)calendar {
+  int mask = NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay;
+  NSDateComponents *components = [calendar components:(mask) fromDate:[NSDate date]];
+  NSDate *tomorrow = [[calendar dateFromComponents:components] advance:[@1 days] calendar:calendar];
+  components = [calendar components:(mask) fromDate:self];
+  NSDate *otherDate = [calendar dateFromComponents:components];
+  return [tomorrow isEqualToDate:otherDate];
 }
 
 @end

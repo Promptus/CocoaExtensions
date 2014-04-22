@@ -35,21 +35,21 @@
     self.target.enabled = NO;
     self.shouldReset = NO;
     string = self.target.text ? self.target.text : @"";
-    self.maxScale = NSIntegerMax;
+    self.maxScale = 20;
     self.comma = @",";
     UIView * padView = [[NSBundle mainBundle] loadNibNamed:@"NumberPad" owner:self options:NULL][0];
     padView.backgroundColor = self.backgroundColor;
     padView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     [self addSubview:padView];
     int buttonWidth = (self.frame.size.width-2)/3;
-    int buttonHeight = (self.frame.size.height-5)/4;
+    int buttonHeight = (self.frame.size.height-3)/4;
     int i = 0;
     for (UIView * subview in padView.subviews) {
       if ([subview isKindOfClass:[UIButton class]]) {
         UIButton * button = (UIButton*)subview;
         int column = i%3;
         int row = i/3;
-        button.frame = CGRectMake(column+(column*buttonWidth), 1+row+(row*buttonHeight), buttonWidth, buttonHeight);
+        button.frame = CGRectMake(column+(column*buttonWidth), row+(row*buttonHeight), buttonWidth, buttonHeight);
         [button setBackgroundColor:self.tintColor forState:UIControlStateHighlighted];
         [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
         i++;

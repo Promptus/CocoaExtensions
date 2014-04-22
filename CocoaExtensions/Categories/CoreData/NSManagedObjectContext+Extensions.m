@@ -30,9 +30,15 @@
   return [self fetchObjectsForEntity:entity predicate:nil sortDescriptors:sortDescriptors];
 }
 
-- (NSArray *)fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors
+- (NSArray *)fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors {
+  return [self fetchObjectsForEntity:entity predicate:predicate sortDescriptors:sortDescriptors fetchLimit:0];
+}
+
+- (NSArray *)fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors fetchLimit:(NSUInteger)limit
 {
   NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntity:[NSEntityDescription entityForName:entity inManagedObjectContext:self] predicate:predicate sortDescriptors:sortDescriptors];
+  if (limit > 0)
+    [request setFetchLimit:limit];
   
   NSError *error = nil;
   @try

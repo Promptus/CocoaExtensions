@@ -25,6 +25,7 @@ typedef void (^ContextObjectsCallback)(NSManagedObjectContext *context, NSArray 
 - (NSArray *)fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate;
 - (NSArray *)fetchObjectsForEntity:(NSString *)entity sortDescriptors:(NSArray *)sortDescriptors;
 - (NSArray *)fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors;
+- (NSArray *)fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors fetchLimit:(NSUInteger)limit;
 - (id)fetchObjectForEntity:(NSString *)entity;
 - (id)fetchObjectForEntity:(NSString *)entity predicate:(NSPredicate *)predicate;
 - (id)fetchObjectForEntity:(NSString *)entity sortDescriptors:(NSArray *)sortDescriptors;

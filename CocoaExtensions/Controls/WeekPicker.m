@@ -27,7 +27,7 @@
 }
 
 - (void)setupCarousel {
-  carousel = [[iCarousel alloc] initWithFrame:self.frame];
+  carousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width+10, self.frame.size.height)];
   carousel.clipsToBounds = YES;
   carousel.delegate = self;
   carousel.dataSource = self;
@@ -79,6 +79,18 @@
 
 - (void)scrollToCurrentWeek:(BOOL)animated {
   [carousel scrollToItemAtIndex:self.numberOfItems/2 animated:animated];
+}
+
+- (void)scrollToNextWeek:(BOOL)animated {
+  if (carousel.currentItemIndex < weeks.count-1) {
+    [carousel scrollToItemAtIndex:carousel.currentItemIndex+1 animated:animated];
+  }
+}
+
+- (void)scrollToPreviousWeek:(BOOL)animated {
+  if (carousel.currentItemIndex > 0) {
+    [carousel scrollToItemAtIndex:carousel.currentItemIndex-1 animated:animated];
+  }
 }
 
 - (NSDate *)getDate {

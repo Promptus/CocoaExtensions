@@ -7,33 +7,34 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="phf-hA-Asy" customClass="WeekPickerItem">
-            <rect key="frame" x="0.0" y="0.0" width="95" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="156" height="52"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APR 2014" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="AI3-rc-GlO">
-                    <rect key="frame" x="8" y="6" width="79" height="17"/>
+                    <rect key="frame" x="54" y="8" width="92" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KW 15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="86T-D0-pu9">
-                    <rect key="frame" x="8" y="27" width="79" height="17"/>
+                    <rect key="frame" x="54" y="25" width="49" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="eff-Fb-JVh"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="AI3-rc-GlO" firstAttribute="top" secondItem="phf-hA-Asy" secondAttribute="top" constant="6" id="B75-py-4C0"/>
-                <constraint firstAttribute="bottom" secondItem="86T-D0-pu9" secondAttribute="bottom" constant="6" id="Bpn-Vs-hRS"/>
-                <constraint firstItem="86T-D0-pu9" firstAttribute="leading" secondItem="phf-hA-Asy" secondAttribute="leading" constant="8" id="H7R-Ts-fUd"/>
-                <constraint firstAttribute="trailing" secondItem="AI3-rc-GlO" secondAttribute="trailing" constant="8" id="L26-zF-KVD"/>
-                <constraint firstItem="86T-D0-pu9" firstAttribute="width" secondItem="AI3-rc-GlO" secondAttribute="width" id="R9z-03-Taj"/>
-                <constraint firstItem="AI3-rc-GlO" firstAttribute="leading" secondItem="phf-hA-Asy" secondAttribute="leading" constant="8" id="cV1-JJ-aDw"/>
-                <constraint firstAttribute="trailing" secondItem="86T-D0-pu9" secondAttribute="trailing" constant="8" id="w9A-S5-MRw"/>
+                <constraint firstAttribute="trailing" secondItem="AI3-rc-GlO" secondAttribute="trailing" constant="10" id="3qN-Q0-AXP"/>
+                <constraint firstItem="AI3-rc-GlO" firstAttribute="top" secondItem="phf-hA-Asy" secondAttribute="top" constant="8" id="aPy-1x-nu9"/>
+                <constraint firstAttribute="bottom" secondItem="86T-D0-pu9" secondAttribute="bottom" constant="10" id="k3O-IY-MPZ"/>
+                <constraint firstAttribute="centerX" secondItem="86T-D0-pu9" secondAttribute="centerX" id="loc-IP-xyf"/>
+                <constraint firstItem="AI3-rc-GlO" firstAttribute="leading" secondItem="86T-D0-pu9" secondAttribute="leading" id="nAf-z9-FRD"/>
             </constraints>
             <connections>
                 <outlet property="monthLabel" destination="AI3-rc-GlO" id="uqs-fj-voT"/>
