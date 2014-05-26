@@ -29,4 +29,6 @@
 
 - (UIImage *)roundedCornerImage:(NSInteger)cornerSize borderSize:(NSInteger)borderSize;
 
+- (BOOL)isLandscape;
+
 @end

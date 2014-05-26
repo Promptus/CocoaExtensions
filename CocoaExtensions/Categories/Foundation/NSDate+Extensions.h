@@ -23,5 +23,9 @@
 - (NSUInteger)year:(NSCalendar *)calendar;
 - (BOOL)isToday:(NSCalendar *)calendar;
 - (BOOL)isTomorrow:(NSCalendar *)calendar;
+- (BOOL)isLaterThan:(NSDate*)date;
+- (BOOL)isEarlierThan:(NSDate *)date;
+
+- (NSString*)formattedString:(NSString*)format;
 
 @end

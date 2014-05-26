@@ -25,6 +25,8 @@
 		6F3E251418228C2500C5566B /* libCocoaExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FC18228C2500C5566B /* libCocoaExtensions.a */; };
 		6F3E251A18228C2500C5566B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F3E251818228C2500C5566B /* InfoPlist.strings */; };
 		6F3E25381822B34300C5566B /* NSArrayExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E25371822B34300C5566B /* NSArrayExtensionsTest.m */; };
+		6F6542FB19264A7E00BDC7A9 /* NSSet+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6542FA19264A7E00BDC7A9 /* NSSet+Extensions.m */; };
+		6F65430B1926A47700BDC7A9 /* NSDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F65430A1926A47700BDC7A9 /* NSDictionary+Extensions.m */; };
 		6F68B5E118DAEFF6000BCAA0 /* NumberPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F68B5DE18DAEFF6000BCAA0 /* NumberPad.m */; };
 		6F68B5E418DAF01A000BCAA0 /* WeekPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F68B5E318DAF01A000BCAA0 /* WeekPicker.m */; };
 		6F68B5E818DAF510000BCAA0 /* WeekPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F68B5E718DAF510000BCAA0 /* WeekPickerItem.m */; };
@@ -99,6 +101,10 @@
 		6F3E251718228C2500C5566B /* CocoaExtensionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaExtensionsTests-Info.plist"; sourceTree = "<group>"; };
 		6F3E251918228C2500C5566B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6F3E25371822B34300C5566B /* NSArrayExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayExtensionsTest.m; path = Categories/NSArrayExtensionsTest.m; sourceTree = "<group>"; };
+		6F6542F919264A7E00BDC7A9 /* NSSet+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+Extensions.h"; sourceTree = "<group>"; };
+		6F6542FA19264A7E00BDC7A9 /* NSSet+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+Extensions.m"; sourceTree = "<group>"; };
+		6F6543091926A47700BDC7A9 /* NSDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extensions.h"; sourceTree = "<group>"; };
+		6F65430A1926A47700BDC7A9 /* NSDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extensions.m"; sourceTree = "<group>"; };
 		6F68B5DE18DAEFF6000BCAA0 /* NumberPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberPad.m; path = Controls/NumberPad.m; sourceTree = "<group>"; };
 		6F68B5DF18DAEFF6000BCAA0 /* NumberPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberPad.h; path = Controls/NumberPad.h; sourceTree = "<group>"; };
 		6F68B5E018DAEFF6000BCAA0 /* NumberPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NumberPad.xib; path = Controls/NumberPad.xib; sourceTree = "<group>"; };
@@ -317,6 +323,10 @@
 				6F1C4F8418BCC80A005FC6DE /* NSNumber+Extensions.m */,
 				6FB82DD518283D71000FC603 /* NSString+Extensions.h */,
 				6FB82DD618283D71000FC603 /* NSString+Extensions.m */,
+				6F6542F919264A7E00BDC7A9 /* NSSet+Extensions.h */,
+				6F6542FA19264A7E00BDC7A9 /* NSSet+Extensions.m */,
+				6F6543091926A47700BDC7A9 /* NSDictionary+Extensions.h */,
+				6F65430A1926A47700BDC7A9 /* NSDictionary+Extensions.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -453,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FC5E1F11823A0CC00C15F70 /* NSFetchRequest+Extensions.m in Sources */,
+				6F6542FB19264A7E00BDC7A9 /* NSSet+Extensions.m in Sources */,
 				6FC5E1F51823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m in Sources */,
 				6FC5E1F71823A0CC00C15F70 /* NSArray+Extensions.m in Sources */,
 				6F68B5E418DAF01A000BCAA0 /* WeekPicker.m in Sources */,
@@ -471,6 +482,7 @@
 				6FC5E1EF1823A0CC00C15F70 /* UIView+Extensions.m in Sources */,
 				6F35B7C018CF474F0008F857 /* NSDecimalNumber+Extensions.m in Sources */,
 				6FC5E1F31823A0CC00C15F70 /* NSManagedObject+Extensions.m in Sources */,
+				6F65430B1926A47700BDC7A9 /* NSDictionary+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

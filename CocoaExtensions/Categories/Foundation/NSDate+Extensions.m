@@ -85,4 +85,21 @@
   return [tomorrow isEqualToDate:otherDate];
 }
 
+- (BOOL)isLaterThan:(NSDate *)date {
+  return [self compare:date] == NSOrderedDescending;
+}
+
+- (BOOL)isEarlierThan:(NSDate *)date {
+  return [self compare:date] == NSOrderedAscending;
+}
+
+- (NSString *)formattedString:(NSString *)format {
+  static NSDateFormatter * formatter;
+  if (formatter == nil) {
+    formatter = [[NSDateFormatter alloc] init];
+  }
+  formatter.dateFormat = format;
+  return [formatter stringFromDate:self];
+}
+
 @end

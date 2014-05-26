@@ -12,6 +12,8 @@
 #import "NSNumber+Extensions.h"
 #import "NSDecimalNumber+Extensions.h"
 #import "NSDate+Extensions.h"
+#import "NSSet+Extensions.h"
+#import "NSDictionary+Extensions.h"
 
 // UIKit Extensions
 #import "UIImage+Extensions.h"

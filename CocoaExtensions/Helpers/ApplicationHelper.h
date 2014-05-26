@@ -23,7 +23,7 @@
 
 # pragma mark Reachability helpers
 
-- (void)setupReachability;
+- (void)setupReachability:(NSString*)host;
 - (BOOL)isReachable;
 - (BOOL)isUnreachable;
 - (BOOL)isReachableViaWWAN;

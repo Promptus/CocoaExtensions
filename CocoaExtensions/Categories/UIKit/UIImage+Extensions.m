@@ -212,6 +212,21 @@
   return roundedImage;
 }
 
+- (BOOL)isLandscape {
+  switch (self.imageOrientation) {
+    case UIImageOrientationLeft:
+    case UIImageOrientationLeftMirrored:
+    case UIImageOrientationRight:
+    case UIImageOrientationRightMirrored:
+      return NO;
+      break;
+    default:
+      return YES;
+      break;
+  }
+  return YES;
+}
+
 #pragma mark -
 #pragma mark Private helper methods
 
