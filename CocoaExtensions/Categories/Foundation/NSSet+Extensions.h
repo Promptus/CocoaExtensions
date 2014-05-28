@@ -10,6 +10,6 @@
 
 @interface NSSet (Extensions)
 
-+ (NSMutableSet*)setWithDictionary:(NSDictionary*)objects creationBlock:(NSObject*(^)(NSDictionary * data))creationBlock;
++ (NSMutableSet*)setWithEnumerable:(id<NSFastEnumeration>)enumerable creationBlock:(NSObject*(^)(NSDictionary * data))creationBlock;
 
 @end

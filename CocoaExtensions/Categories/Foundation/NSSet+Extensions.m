@@ -10,9 +10,9 @@
 
 @implementation NSSet (Extensions)
 
-+ (NSMutableSet*)setWithDictionary:(NSDictionary*)objects creationBlock:(NSObject*(^)(NSDictionary * data))creationBlock {
-  NSMutableSet * set = [NSMutableSet setWithCapacity:objects.count];
-  for (NSDictionary * dict in objects) {
++ (NSMutableSet*)setWithEnumerable:(id<NSFastEnumeration>)enumerable creationBlock:(NSObject*(^)(NSDictionary * data))creationBlock {
+  NSMutableSet * set = [NSMutableSet set];
+  for (NSDictionary * dict in enumerable) {
     NSObject * object = creationBlock(dict);
     if (object)
       [set addObject:object];
