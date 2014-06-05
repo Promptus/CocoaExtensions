@@ -97,6 +97,7 @@
   static NSDateFormatter * formatter;
   if (formatter == nil) {
     formatter = [[NSDateFormatter alloc] init];
+    formatter.locale = [NSLocale currentLocale];
   }
   formatter.dateFormat = format;
   return [formatter stringFromDate:self];
