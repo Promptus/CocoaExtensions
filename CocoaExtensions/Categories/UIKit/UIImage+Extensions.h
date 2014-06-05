@@ -31,4 +31,6 @@
 
 - (BOOL)isLandscape;
 
+- (UIImage *)tintedImageWithColor:(UIColor *)tintColor;
+
 @end
