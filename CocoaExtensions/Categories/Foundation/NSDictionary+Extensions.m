@@ -43,4 +43,12 @@
   return nil;
 }
 
+- (NSDate *)dateForKey:(NSString *)key withFormatter:(NSDateFormatter *)dateFormatter {
+  NSString * obj = [self objectForKey:key];
+  if ([NSString isPresent:obj]) {
+    return [dateFormatter dateFromString:obj];
+  }
+  return nil;
+}
+
 @end

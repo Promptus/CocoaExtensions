@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSString+Extensions.h"
 
 @interface NSDictionary (Extensions)
 
 - (NSString*)stringForKey:(NSString*)key;
 - (NSNumber*)numberForKey:(NSString*)key;
 - (NSDecimalNumber*)decimalNumberForKey:(NSString*)key;
+- (NSDate *)dateForKey:(NSString *)key withFormatter:(NSDateFormatter *)dateFormatter;
 
 @end
