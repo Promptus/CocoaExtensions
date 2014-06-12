@@ -39,4 +39,12 @@
   return [self hours] * 24;
 }
 
+- (NSString*)formattedString:(NSLocale *)locale {
+  static NSNumberFormatter * formatter;
+  if (formatter == nil)
+    formatter = [[NSNumberFormatter alloc] init];
+  formatter.locale = locale;
+  return [formatter stringFromNumber:self];
+}
+
 @end

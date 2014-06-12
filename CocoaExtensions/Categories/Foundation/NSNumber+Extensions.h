@@ -15,5 +15,6 @@
 - (NSInteger)minutes;
 - (NSInteger)hours;
 - (NSInteger)days;
+- (NSString*)formattedString:(NSLocale*)locale;
 
 @end
