@@ -17,6 +17,7 @@
 		6F1C4F8618BCC80A005FC6DE /* NSNumber+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8418BCC80A005FC6DE /* NSNumber+Extensions.m */; };
 		6F1C4F8D18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8C18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m */; };
 		6F1C4F8E18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8C18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m */; };
+		6F2136241952D7C400BFA9B4 /* UIStoryboard+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2136231952D7C400BFA9B4 /* UIStoryboard+Extensions.m */; };
 		6F35B7C018CF474F0008F857 /* NSDecimalNumber+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F35B7BF18CF474F0008F857 /* NSDecimalNumber+Extensions.m */; };
 		6F3E250018228C2500C5566B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FF18228C2500C5566B /* Foundation.framework */; };
 		6F3E250518228C2500C5566B /* CocoaExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6F3E250418228C2500C5566B /* CocoaExtensions.h */; };
@@ -88,6 +89,8 @@
 		6F1C4F8418BCC80A005FC6DE /* NSNumber+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Extensions.m"; sourceTree = "<group>"; };
 		6F1C4F8B18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DirectoryLocations.h"; sourceTree = "<group>"; };
 		6F1C4F8C18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DirectoryLocations.m"; sourceTree = "<group>"; };
+		6F2136221952D7C400BFA9B4 /* UIStoryboard+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Extensions.h"; sourceTree = "<group>"; };
+		6F2136231952D7C400BFA9B4 /* UIStoryboard+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Extensions.m"; sourceTree = "<group>"; };
 		6F26AD471828DDDF0058E281 /* XCTAssertMacroExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTAssertMacroExtension.h; sourceTree = "<group>"; };
 		6F35B7BE18CF474F0008F857 /* NSDecimalNumber+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Extensions.h"; sourceTree = "<group>"; };
 		6F35B7BF18CF474F0008F857 /* NSDecimalNumber+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Extensions.m"; sourceTree = "<group>"; };
@@ -289,6 +292,8 @@
 				6FF65EA218C8745100A5A2B5 /* UIColor+Extensions.m */,
 				6FC5E1D31823A0CC00C15F70 /* UIImage+Extensions.h */,
 				6FC5E1D41823A0CC00C15F70 /* UIImage+Extensions.m */,
+				6F2136221952D7C400BFA9B4 /* UIStoryboard+Extensions.h */,
+				6F2136231952D7C400BFA9B4 /* UIStoryboard+Extensions.m */,
 				6FC5E1DB1823A0CC00C15F70 /* UIView+Extensions.h */,
 				6FC5E1DC1823A0CC00C15F70 /* UIView+Extensions.m */,
 			);
@@ -474,6 +479,7 @@
 				6F68B5E118DAEFF6000BCAA0 /* NumberPad.m in Sources */,
 				6F10995718A288830026189C /* ReachabilityManager.m in Sources */,
 				6F10995118A2886D0026189C /* CoreDataManager.m in Sources */,
+				6F2136241952D7C400BFA9B4 /* UIStoryboard+Extensions.m in Sources */,
 				6FC29E0318C0E6C9000B59FD /* NSDate+Extensions.m in Sources */,
 				6F1C4F8D18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m in Sources */,
 				6F68B5E818DAF510000BCAA0 /* WeekPickerItem.m in Sources */,

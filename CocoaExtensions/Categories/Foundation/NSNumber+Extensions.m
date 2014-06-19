@@ -43,6 +43,7 @@
   static NSNumberFormatter * formatter;
   if (formatter == nil)
     formatter = [[NSNumberFormatter alloc] init];
+  formatter.numberStyle = NSNumberFormatterDecimalStyle;
   formatter.locale = locale;
   return [formatter stringFromNumber:self];
 }

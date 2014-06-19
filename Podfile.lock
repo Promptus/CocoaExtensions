@@ -7,7 +7,7 @@ DEPENDENCIES:
   - Reachability (~> 3.1.1)
 
 SPEC CHECKSUMS:
-  iCarousel: e23a26d7ba722215a42144e80adb0dcb59bebc41
-  Reachability: 2be6bc2fd2bd31d97f5db33e75e4b29c79e95883
+  iCarousel: c35a4e26b3c657847e523012b593e70ddbd84992
+  Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
 
 COCOAPODS: 0.33.1

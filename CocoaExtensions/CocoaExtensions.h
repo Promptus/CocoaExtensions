@@ -20,6 +20,7 @@
 #import "UIButton+Extensions.h"
 #import "UIColor+Extensions.h"
 #import "UIView+Extensions.h"
+#import "UIStoryboard+Extensions.h"
 
 // CoreData Extensions
 #import "CoreDataManager.h"
