@@ -19,6 +19,10 @@
 - (NSDate *)beginningOfDay:(NSCalendar*)calendar;
 - (NSDate *)endOfDay:(NSCalendar*)calendar;
 - (NSUInteger)calendarWeek:(NSCalendar *)calendar;
+- (NSUInteger)second:(NSCalendar *)calendar;
+- (NSUInteger)minute:(NSCalendar *)calendar;
+- (NSUInteger)hour:(NSCalendar *)calendar;
+- (NSUInteger)day:(NSCalendar *)calendar;
 - (NSUInteger)month:(NSCalendar *)calendar;
 - (NSUInteger)year:(NSCalendar *)calendar;
 - (BOOL)isToday:(NSCalendar *)calendar;
@@ -27,5 +31,6 @@
 - (BOOL)isEarlierThan:(NSDate *)date;
 
 - (NSString*)formattedString:(NSString*)format;
+- (NSDate *)dateWithHour:(NSUInteger)hour minute:(NSUInteger)min second:(NSUInteger)sec calendar:(NSCalendar*)calendar;
 
 @end

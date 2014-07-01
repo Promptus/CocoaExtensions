@@ -57,6 +57,26 @@
   return [comps weekday];
 }
 
+- (NSUInteger)second:(NSCalendar *)calendar {
+  NSDateComponents *comps = [calendar components:NSSecondCalendarUnit fromDate:self];
+  return [comps second];
+}
+
+- (NSUInteger)minute:(NSCalendar *)calendar {
+  NSDateComponents *comps = [calendar components:NSMinuteCalendarUnit fromDate:self];
+  return [comps minute];
+}
+
+- (NSUInteger)hour:(NSCalendar *)calendar {
+  NSDateComponents *comps = [calendar components:NSHourCalendarUnit fromDate:self];
+  return [comps hour];
+}
+
+- (NSUInteger)day:(NSCalendar *)calendar {
+  NSDateComponents *comps = [calendar components:NSDayCalendarUnit fromDate:self];
+  return [comps day];
+}
+
 - (NSUInteger)month:(NSCalendar *)calendar {
   NSDateComponents *comps = [calendar components:NSMonthCalendarUnit fromDate:self];
   return [comps month];
@@ -101,6 +121,15 @@
   }
   formatter.dateFormat = format;
   return [formatter stringFromDate:self];
+}
+
+- (NSDate *)dateWithHour:(NSUInteger)hour minute:(NSUInteger)min second:(NSUInteger)sec calendar:(NSCalendar*)calendar {
+  NSUInteger timeComps = (NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSTimeZoneCalendarUnit);
+  NSDateComponents *components = [calendar components:timeComps fromDate:self];
+  [components setHour:hour];
+  [components setMinute:min];
+  [components setSecond:sec];
+  return [calendar dateFromComponents:components];
 }
 
 @end
