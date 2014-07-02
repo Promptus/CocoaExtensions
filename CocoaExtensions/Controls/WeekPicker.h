@@ -24,10 +24,11 @@
 @property (nonatomic, strong) NSDateFormatter * calendarWeekFormatter;
 @property (nonatomic, strong) NSDateFormatter * monthAndYearFormatter;
 
-- (void)load;
+- (void)load:(NSDate*)date;
 - (NSDate *)getDate;
 - (void)scrollToCurrentWeek:(BOOL)animated;
 - (void)scrollToNextWeek:(BOOL)animated;
 - (void)scrollToPreviousWeek:(BOOL)animated;
+- (void)scrollToDate:(NSDate*)date animated:(BOOL)animated;
 
 @end

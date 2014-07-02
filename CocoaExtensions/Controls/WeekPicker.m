@@ -36,7 +36,7 @@
   self.numberOfVisibleItems = 7;
 }
 
-- (void)load {
+- (void)load:(NSDate*)date {
   if (self.calendar == nil)
     self.calendar = [NSCalendar currentCalendar];
   if (self.calendarWeekFormatter == nil) {
@@ -49,23 +49,33 @@
     self.monthAndYearFormatter.locale = self.calendar.locale;
     self.monthAndYearFormatter.dateFormat = @"MMM YYYY";
   }
-  [self setupWeeks];
+  [self setupWeeks:date];
 }
 
-- (void)setupWeeks {
+- (void)setupWeeks:(NSDate*)initialDate {
+  NSString * initialWeekLabel = initialDate ? [self buildWeekLabel:initialDate] : @"";
+  NSInteger initialYear = initialDate ? [initialDate year:self.calendar] : -1;
   weeks = [NSMutableArray arrayWithCapacity:self.numberOfItems];
   int halfNumberOfWeeks = (int)(-7*(self.numberOfItems/2));
   NSNumber * weeksAgo = [NSNumber numberWithInt:halfNumberOfWeeks];
   NSDate * currentWeekDate = [[NSDate date] advance:[weeksAgo days] calendar:self.calendar];
   NSDate * lastWeekDate = currentWeekDate;
   [weeks addObject:[self buildItemDictionary:currentWeekDate lastDate:nil]];
+  int initialWeekIndex = -1;
   for (int i = 0; i < self.numberOfItems; i++) {
     currentWeekDate = [currentWeekDate advance:[@7 days] calendar:self.calendar];
-    [weeks addObject:[self buildItemDictionary:currentWeekDate lastDate:lastWeekDate]];
+    NSDictionary * dict = [self buildItemDictionary:currentWeekDate lastDate:lastWeekDate];
+    [weeks addObject:dict];
+    if ([[dict objectForKey:@"weekLabel"] isEqualToString:initialWeekLabel] && [currentWeekDate year:self.calendar] == initialYear) {
+      initialWeekIndex = i+1;
+    }
     lastWeekDate = currentWeekDate;
   }
   [carousel reloadData];
-  [self scrollToCurrentWeek:NO];
+  if (initialWeekIndex > 0)
+    [carousel scrollToItemAtIndex:initialWeekIndex animated:NO];
+  else
+    [self scrollToCurrentWeek:NO];
 }
 
 - (NSDictionary*)buildItemDictionary:(NSDate *)currentDate lastDate:(NSDate *)lastDate {
@@ -73,8 +83,12 @@
   if (lastDate == nil || [currentDate month:self.calendar] != [lastDate month:self.calendar]) {
     monthLabel = [[self.monthAndYearFormatter stringFromDate:currentDate] uppercaseString];
   }
-  NSString * weekLabel = [NSString stringWithFormat:@"KW %@", [self.calendarWeekFormatter stringFromDate:currentDate]];
+  NSString * weekLabel = [self buildWeekLabel:currentDate];
   return @{@"date": currentDate, @"monthLabel": monthLabel, @"weekLabel": weekLabel};
+}
+
+- (NSString *)buildWeekLabel:(NSDate*)date {
+  return [NSString stringWithFormat:@"KW %@", [self.calendarWeekFormatter stringFromDate:date]];
 }
 
 - (void)scrollToCurrentWeek:(BOOL)animated {
@@ -90,6 +104,17 @@
 - (void)scrollToPreviousWeek:(BOOL)animated {
   if (carousel.currentItemIndex > 0) {
     [carousel scrollToItemAtIndex:carousel.currentItemIndex-1 animated:animated];
+  }
+}
+
+- (void)scrollToDate:(NSDate*)date animated:(BOOL)animated {
+  NSString * weekLabel = [self buildWeekLabel:date];
+  for (int i = 0; i < weeks.count; i++) {
+    NSDictionary * dict = [weeks objectAtIndex:i];
+    if ([[dict objectForKey:@"weekLabel"] isEqualToString:weekLabel]) {
+      [carousel scrollToItemAtIndex:i animated:animated];
+      break;
+    }
   }
 }
 
