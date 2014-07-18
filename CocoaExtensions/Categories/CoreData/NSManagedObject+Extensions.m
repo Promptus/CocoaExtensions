@@ -26,8 +26,16 @@
   return [context fetchObjectForEntity:[self entityName] predicate:predicate];
 }
 
++ (id)find:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context {
+  return [context fetchObjectForEntity:[self entityName] predicate:predicate sortDescriptors:sortDescriptors];
+}
+
 + (NSArray*)all:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
   return [context fetchObjectsForEntity:[self entityName] predicate:predicate];
+}
+
++ (NSArray *)all:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context {
+  return [context fetchObjectsForEntity:[self entityName] predicate:predicate sortDescriptors:sortDescriptors];
 }
 
 + (NSUInteger)count:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
