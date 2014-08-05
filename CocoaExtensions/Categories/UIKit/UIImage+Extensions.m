@@ -384,9 +384,9 @@
   return tintedImage;
 }
 
-+ (UIImage *)imageWithColor:(UIColor *)color
++ (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize) size
 {
-  CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+  CGRect rect = CGRectMake(0.0f, 0.0f, size.height, size.width);
   UIGraphicsBeginImageContext(rect.size);
   CGContextRef context = UIGraphicsGetCurrentContext();
   
