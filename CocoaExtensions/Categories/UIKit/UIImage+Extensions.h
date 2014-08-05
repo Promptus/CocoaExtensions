@@ -33,6 +33,6 @@
 
 - (UIImage *)tintedImageWithColor:(UIColor *)tintColor;
 
-+ (UIImage *)imageWithColor:(UIColor *)color andSize:(CGRect) size;
++ (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize) size;
 
 @end
