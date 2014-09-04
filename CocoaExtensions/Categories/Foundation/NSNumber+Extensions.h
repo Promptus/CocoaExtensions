@@ -11,6 +11,7 @@
 @interface NSNumber (Extensions)
 
 - (NSString *)formattedEuro;
+- (NSString *)formattedRoundedEuroWithoutDecimals;
 - (NSDecimalNumber*)decimalNumberDividedByFloat:(float)divider;
 - (NSInteger)minutes;
 - (NSInteger)hours;

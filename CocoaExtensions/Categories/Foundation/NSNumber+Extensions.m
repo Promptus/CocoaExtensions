@@ -22,6 +22,19 @@
   return [formatter stringFromNumber:self];
 }
 
+- (NSString *)formattedRoundedEuroWithoutDecimals {
+  static NSNumberFormatter *formatter;
+  if (formatter == nil) {
+    formatter = [[NSNumberFormatter alloc] init];
+    formatter.usesGroupingSeparator = YES;
+    formatter.groupingSeparator = @".";
+    formatter.maximumFractionDigits = 0;
+    formatter.minimumFractionDigits = 0;
+    formatter.positiveFormat = @"#,##0 €";
+  }
+  return [formatter stringFromNumber:self];
+}
+
 - (NSDecimalNumber*)decimalNumberDividedByFloat:(float)divider {
   NSDecimal decimal = [[NSNumber numberWithFloat:[self integerValue]/divider] decimalValue];
   return [NSDecimalNumber decimalNumberWithDecimal:decimal];
