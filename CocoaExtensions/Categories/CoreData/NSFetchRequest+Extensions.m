@@ -30,7 +30,7 @@
 
 - (id)initWithEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors
 {
-  self = [super init];
+  self = [self init];
   if(self)
   {
     self.entity = entity;
