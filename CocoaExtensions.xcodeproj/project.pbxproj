@@ -26,6 +26,7 @@
 		6F3E251418228C2500C5566B /* libCocoaExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FC18228C2500C5566B /* libCocoaExtensions.a */; };
 		6F3E251A18228C2500C5566B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F3E251818228C2500C5566B /* InfoPlist.strings */; };
 		6F3E25381822B34300C5566B /* NSArrayExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E25371822B34300C5566B /* NSArrayExtensionsTest.m */; };
+		6F5401A219D44ABC005222A6 /* WebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5401A019D44ABC005222A6 /* WebBrowserViewController.m */; };
 		6F6542FB19264A7E00BDC7A9 /* NSSet+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6542FA19264A7E00BDC7A9 /* NSSet+Extensions.m */; };
 		6F65430B1926A47700BDC7A9 /* NSDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F65430A1926A47700BDC7A9 /* NSDictionary+Extensions.m */; };
 		6F68B5E118DAEFF6000BCAA0 /* NumberPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F68B5DE18DAEFF6000BCAA0 /* NumberPad.m */; };
@@ -104,6 +105,11 @@
 		6F3E251718228C2500C5566B /* CocoaExtensionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaExtensionsTests-Info.plist"; sourceTree = "<group>"; };
 		6F3E251918228C2500C5566B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6F3E25371822B34300C5566B /* NSArrayExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayExtensionsTest.m; path = Categories/NSArrayExtensionsTest.m; sourceTree = "<group>"; };
+		6F54019F19D44ABC005222A6 /* WebBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebBrowserViewController.h; path = Controllers/WebBrowserViewController.h; sourceTree = "<group>"; };
+		6F5401A019D44ABC005222A6 /* WebBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebBrowserViewController.m; path = Controllers/WebBrowserViewController.m; sourceTree = "<group>"; };
+		6F5401A119D44ABC005222A6 /* WebBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebBrowserViewController.xib; path = Controllers/WebBrowserViewController.xib; sourceTree = "<group>"; };
+		6F5401A519D44B60005222A6 /* icon-back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-back@2x.png"; sourceTree = "<group>"; };
+		6F5401A619D44B80005222A6 /* icon-forward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-forward@2x.png"; sourceTree = "<group>"; };
 		6F6542F919264A7E00BDC7A9 /* NSSet+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+Extensions.h"; sourceTree = "<group>"; };
 		6F6542FA19264A7E00BDC7A9 /* NSSet+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+Extensions.m"; sourceTree = "<group>"; };
 		6F6543091926A47700BDC7A9 /* NSDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extensions.h"; sourceTree = "<group>"; };
@@ -226,10 +232,12 @@
 		6F3E250118228C2500C5566B /* CocoaExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				6FF65EA418C8770700A5A2B5 /* Controls */,
-				6F10994C18A2883D0026189C /* Managers */,
-				6F10994418A273E20026189C /* Helpers */,
 				6F3E252518228C8D00C5566B /* Categories */,
+				6FF65EA418C8770700A5A2B5 /* Controls */,
+				6F54019A19D449FF005222A6 /* Controllers */,
+				6F10994418A273E20026189C /* Helpers */,
+				6F10994C18A2883D0026189C /* Managers */,
+				6F5401A319D44AE2005222A6 /* Resources */,
 				6F3E250418228C2500C5566B /* CocoaExtensions.h */,
 				6F3E250218228C2500C5566B /* Supporting Files */,
 				6F26AD471828DDDF0058E281 /* XCTAssertMacroExtension.h */,
@@ -281,6 +289,25 @@
 				6FB82DD918283F0D000FC603 /* NSStringExtensionTest.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		6F54019A19D449FF005222A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6F54019F19D44ABC005222A6 /* WebBrowserViewController.h */,
+				6F5401A019D44ABC005222A6 /* WebBrowserViewController.m */,
+				6F5401A119D44ABC005222A6 /* WebBrowserViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6F5401A319D44AE2005222A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6F5401A619D44B80005222A6 /* icon-forward@2x.png */,
+				6F5401A519D44B60005222A6 /* icon-back@2x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		6FC5E1D21823A0CC00C15F70 /* UIKit */ = {
@@ -489,6 +516,7 @@
 				6F35B7C018CF474F0008F857 /* NSDecimalNumber+Extensions.m in Sources */,
 				6FC5E1F31823A0CC00C15F70 /* NSManagedObject+Extensions.m in Sources */,
 				6F65430B1926A47700BDC7A9 /* NSDictionary+Extensions.m in Sources */,
+				6F5401A219D44ABC005222A6 /* WebBrowserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
