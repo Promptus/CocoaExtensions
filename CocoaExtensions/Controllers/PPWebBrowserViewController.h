@@ -1,5 +1,5 @@
 //
-//  WebBrowserViewController.h
+//  PPWebBrowserViewController.h
 //  MSSNGR
 //
 //  Created by Lars Kuhnt on 29.01.14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebBrowserViewController : UIViewController <UIWebViewDelegate, NSURLConnectionDelegate> {
+@interface PPWebBrowserViewController : UIViewController <UIWebViewDelegate, NSURLConnectionDelegate> {
   IBOutlet UIWebView *       webView;
   IBOutlet UIBarButtonItem * closeButton;
   IBOutlet UIBarButtonItem * actionButton;

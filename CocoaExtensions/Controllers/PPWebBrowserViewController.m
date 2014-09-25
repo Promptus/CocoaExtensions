@@ -1,24 +1,24 @@
 //
-//  WebBrowserViewController.m
+//  PPWebBrowserViewController.m
 //  MSSNGR
 //
 //  Created by Lars Kuhnt on 29.01.14.
 //  Copyright (c) 2014 Promptus. All rights reserved.
 //
 
-#import "WebBrowserViewController.h"
+#import "PPWebBrowserViewController.h"
 #import "NSString+Extensions.h"
 
-@interface WebBrowserViewController ()
+@interface PPWebBrowserViewController ()
 
 @end
 
-@implementation WebBrowserViewController
+@implementation PPWebBrowserViewController
 
 @synthesize urlString;
 
 + (id)webViewControllerWithURLString:(NSString *)urlString {
-  return [[WebBrowserViewController alloc] initWebViewControllerWithURLString:urlString];
+  return [[PPWebBrowserViewController alloc] initWebViewControllerWithURLString:urlString];
 }
 
 
