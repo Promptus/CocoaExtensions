@@ -20,6 +20,8 @@
 }
 
 @property (nonatomic, strong) NSString * urlString;
+@property (nonatomic, strong) UIColor * tintColor;
+@property (nonatomic, strong) UIColor * titleColor;
 
 + (id)webViewControllerWithURLString:(NSString*)urlString;
 

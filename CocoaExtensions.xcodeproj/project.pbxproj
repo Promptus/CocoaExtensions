@@ -107,7 +107,7 @@
 		6F3E25371822B34300C5566B /* NSArrayExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayExtensionsTest.m; path = Categories/NSArrayExtensionsTest.m; sourceTree = "<group>"; };
 		6F54019F19D44ABC005222A6 /* PPWebBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPWebBrowserViewController.h; path = Controllers/PPWebBrowserViewController.h; sourceTree = "<group>"; };
 		6F5401A019D44ABC005222A6 /* PPWebBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPWebBrowserViewController.m; path = Controllers/PPWebBrowserViewController.m; sourceTree = "<group>"; };
-		6F5401A119D44ABC005222A6 /* WebBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebBrowserViewController.xib; path = Controllers/WebBrowserViewController.xib; sourceTree = "<group>"; };
+		6F5401A119D44ABC005222A6 /* PPWebBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PPWebBrowserViewController.xib; path = Controllers/PPWebBrowserViewController.xib; sourceTree = "<group>"; };
 		6F5401A519D44B60005222A6 /* icon-back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-back@2x.png"; sourceTree = "<group>"; };
 		6F5401A619D44B80005222A6 /* icon-forward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-forward@2x.png"; sourceTree = "<group>"; };
 		6F6542F919264A7E00BDC7A9 /* NSSet+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+Extensions.h"; sourceTree = "<group>"; };
@@ -296,7 +296,7 @@
 			children = (
 				6F54019F19D44ABC005222A6 /* PPWebBrowserViewController.h */,
 				6F5401A019D44ABC005222A6 /* PPWebBrowserViewController.m */,
-				6F5401A119D44ABC005222A6 /* WebBrowserViewController.xib */,
+				6F5401A119D44ABC005222A6 /* PPWebBrowserViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

@@ -16,6 +16,8 @@
 @implementation PPWebBrowserViewController
 
 @synthesize urlString;
+@synthesize tintColor;
+@synthesize titleColor;
 
 + (id)webViewControllerWithURLString:(NSString *)urlString {
   return [[PPWebBrowserViewController alloc] initWebViewControllerWithURLString:urlString];
@@ -44,10 +46,14 @@
   [super viewDidLoad];
   webView.delegate = self;
   navigationBar.topItem.title = self.urlString;
+  UIColor * _tintColor = tintColor ? tintColor : [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
+  navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: titleColor};
   if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] == NSOrderedAscending) {
-    UIColor * tintColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
-    navigationBar.tintColor = tintColor;
-    toolbar.tintColor = tintColor;
+    navigationBar.tintColor = _tintColor;
+    toolbar.tintColor = _tintColor;
+  } else {
+    navigationBar.barTintColor = _tintColor;
+    toolbar.barTintColor = _tintColor;
   }
   NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]];
   [webView loadRequest:request];
@@ -92,6 +98,15 @@
   return YES;
 }
 
+-(void)setTintColor:(UIColor *)_tintColor {
+  tintColor = _tintColor;
+  navigationBar.tintColor = _tintColor;
+  toolbar.tintColor = _tintColor;
+}
 
+-(void)setTitleColor:(UIColor *)_titleColor {
+  titleColor = _titleColor;
+  navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: _titleColor};
+}
 
 @end
