@@ -47,7 +47,9 @@
   webView.delegate = self;
   navigationBar.topItem.title = self.urlString;
   UIColor * _tintColor = tintColor ? tintColor : [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
-  navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: titleColor};
+  if (titleColor) {
+    navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: titleColor};
+  }
   if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] == NSOrderedAscending) {
     navigationBar.tintColor = _tintColor;
     toolbar.tintColor = _tintColor;
