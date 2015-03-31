@@ -12,9 +12,9 @@
 
 @interface CoreDataManager : NSObject
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (readonly, strong, atomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, atomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, atomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSString *persistentStoreName;
 @property (readonly, strong, nonatomic) NSString *persistentStoreConfiguration;
 @property (readonly, strong, nonatomic) NSDictionary *persistentStoreOptions;
