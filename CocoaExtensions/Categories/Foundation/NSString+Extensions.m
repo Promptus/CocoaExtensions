@@ -65,5 +65,13 @@
   return [value isKindOfClass:[NSString class]] ? value : @"";
 }
 
++ (NSString *)encodeUrlString:(NSStringEncoding)encoding {
+  NSString *charactersToLeaveUnescaped = @"!*'\"();:@&=+$,/?%#[]% ";
+  return (NSString *) CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,
+                                                                                (CFStringRef) self,
+                                                                                (CFStringRef) charactersToLeaveUnescaped,
+                                                                                NULL,
+                                                                                CFStringConvertNSStringEncodingToEncoding(encoding)));
+}
 
 @end

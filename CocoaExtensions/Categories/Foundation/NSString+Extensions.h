@@ -24,4 +24,6 @@
 
 + (NSString*)blankDefault:(id)value;
 
++ (NSString *)encodeUrlString:(NSStringEncoding)encoding;
+
 @end
