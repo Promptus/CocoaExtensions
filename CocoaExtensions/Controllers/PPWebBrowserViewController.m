@@ -33,7 +33,7 @@
 
 - (id)initWebViewControllerWithURLString:(NSString *)_urlString {
   if (self = [super init]) {
-    _urlString = [_urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    _urlString = [_urlString urlStringUsingEncoding:NSUTF8StringEncoding];
     if ([_urlString hasPrefix:@"http://"] || [_urlString hasPrefix:@"https://"]) {
       self.urlString = _urlString;
     } else {
