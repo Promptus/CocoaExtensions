@@ -16,6 +16,8 @@
 # pragma mark Filesystem helpers
 
 + (NSURL *)documentsDirectory;
++ (uint64_t)freeDiscSpace;
++ (BOOL)freeDiscSpaceFallsShortOf:(NSUInteger)megaBytes;
 
 # pragma mark Translation helpers
 

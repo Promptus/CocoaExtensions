@@ -23,6 +23,30 @@
   return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
++ (uint64_t)freeDiscSpace {
+  uint64_t totalSpace = 0;
+  uint64_t totalFreeSpace = 0;
+  
+  __autoreleasing NSError *error = nil;
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+  NSDictionary *dictionary = [[NSFileManager defaultManager] attributesOfFileSystemForPath:[paths lastObject] error: &error];
+  
+  if (dictionary) {
+    NSNumber *fileSystemSizeInBytes = [dictionary objectForKey: NSFileSystemSize];
+    NSNumber *freeFileSystemSizeInBytes = [dictionary objectForKey:NSFileSystemFreeSize];
+    totalSpace = [fileSystemSizeInBytes unsignedLongLongValue];
+    totalFreeSpace = [freeFileSystemSizeInBytes unsignedLongLongValue];
+  }
+  
+  return totalFreeSpace;
+}
+
++ (BOOL)freeDiscSpaceFallsShortOf:(NSUInteger)megaBytes {
+  uint64_t bytes = megaBytes * 1024ll * 1024ll;
+  NSLog(@"%llu / %llu", bytes, [ApplicationHelper freeDiscSpace]);
+  return [ApplicationHelper freeDiscSpace] < bytes;
+}
+
 # pragma mark Translation helpers
 
 + (NSString *)t:(NSString *)key {
