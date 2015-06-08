@@ -25,5 +25,6 @@
 + (NSString*)blankDefault:(id)value;
 
 - (NSString *)urlStringUsingEncoding:(NSStringEncoding)encoding;
+- (NSString *)removeAllWhiteSpaces;
 
 @end
