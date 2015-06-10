@@ -27,10 +27,10 @@
 //
 @interface NSFileManager (DirectoryLocations)
 
-- (NSString *)findOrCreateDirectory:(NSSearchPathDirectory)searchPathDirectory
-	inDomain:(NSSearchPathDomainMask)domainMask
-	appendPathComponent:(NSString *)appendComponent
-	error:(NSError **)errorOut;
-- (NSString *)applicationSupportDirectory;
+- (NSString *)ce_findOrCreateDirectory:(NSSearchPathDirectory)searchPathDirectory
+                              inDomain:(NSSearchPathDomainMask)domainMask
+                   appendPathComponent:(NSString *)appendComponent
+                                 error:(NSError **)errorOut;
+- (NSString *)ce_applicationSupportDirectory;
 
 @end

@@ -32,7 +32,7 @@ NSString * const DirectoryLocationDomain = @"DirectoryLocationDomain";
 @implementation NSFileManager (DirectoryLocations)
 
 //
-// findOrCreateDirectory:inDomain:appendPathComponent:error:
+// ce_findOrCreateDirectory:inDomain:appendPathComponent:error:
 //
 // Method to tie together the steps of:
 //	1) Locate a standard directory by search path and domain mask
@@ -49,10 +49,10 @@ NSString * const DirectoryLocationDomain = @"DirectoryLocationDomain";
 //
 // returns the path to the directory (if path found and exists), nil otherwise
 //
-- (NSString *)findOrCreateDirectory:(NSSearchPathDirectory)searchPathDirectory
-	inDomain:(NSSearchPathDomainMask)domainMask
-	appendPathComponent:(NSString *)appendComponent
-	error:(NSError **)errorOut
+- (NSString *)ce_findOrCreateDirectory:(NSSearchPathDirectory)searchPathDirectory
+                              inDomain:(NSSearchPathDomainMask)domainMask
+                   appendPathComponent:(NSString *)appendComponent
+                                 error:(NSError **)errorOut
 {
 	//
 	// Search for the path
@@ -129,20 +129,20 @@ NSString * const DirectoryLocationDomain = @"DirectoryLocationDomain";
 }
 
 //
-// applicationSupportDirectory
+// ce_applicationSupportDirectory
 //
-// Returns the path to the applicationSupportDirectory (creating it if it doesn't
+// Returns the path to the ce_applicationSupportDirectory (creating it if it doesn't
 // exist).
 //
-- (NSString *)applicationSupportDirectory
+- (NSString *)ce_applicationSupportDirectory
 {
 	NSError *error;
 	NSString *result =
-		[self
-			findOrCreateDirectory:NSApplicationSupportDirectory
-			inDomain:NSUserDomainMask
-			appendPathComponent:nil
-			error:&error];
+      [self
+          ce_findOrCreateDirectory:NSApplicationSupportDirectory
+                          inDomain:NSUserDomainMask
+               appendPathComponent:nil
+                             error:&error];
 	if (!result)
 	{
 		NSLog(@"Unable to find or create application support directory:\n%@", error);
@@ -151,20 +151,20 @@ NSString * const DirectoryLocationDomain = @"DirectoryLocationDomain";
 }
 
 //
-// applicationSupportDirectory
+// ce_applicationSupportDirectory
 //
-// Returns the path to the applicationSupportDirectory (creating it if it doesn't
+// Returns the path to the ce_applicationSupportDirectory (creating it if it doesn't
 // exist).
 //
 - (NSString *)documentsDirectory
 {
 	NSError *error;
 	NSString *result =
-  [self
-   findOrCreateDirectory:NSDocumentDirectory
-   inDomain:NSUserDomainMask
-   appendPathComponent:nil
-   error:&error];
+      [self
+          ce_findOrCreateDirectory:NSDocumentDirectory
+                          inDomain:NSUserDomainMask
+               appendPathComponent:nil
+                             error:&error];
 	if (!result)
 	{
 		NSLog(@"Unable to find or create application support directory:\n%@", error);

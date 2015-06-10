@@ -101,7 +101,7 @@
 }
 
 + (NSURL*)storePath:(NSString*)name {
-  NSString * applicationSupportDirectory = [[NSFileManager defaultManager] applicationSupportDirectory];
+  NSString * applicationSupportDirectory = [[NSFileManager defaultManager] ce_applicationSupportDirectory];
   NSURL * applicationSupportDirectoryURL = [NSURL fileURLWithPath:applicationSupportDirectory];
   return [applicationSupportDirectoryURL URLByAppendingPathComponent:[name stringByAppendingString:@".sqlite"]];
 }
