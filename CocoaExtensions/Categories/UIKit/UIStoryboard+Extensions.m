@@ -10,7 +10,7 @@
 
 @implementation UIStoryboard (Extensions)
 
-+ (id)instantiateViewControllerWithIdentifier:(NSString *)identifier fromStoryboard:(NSString *)storyboardName {
++ (id)ce_instantiateViewControllerWithIdentifier:(NSString *)identifier fromStoryboard:(NSString *)storyboardName {
   UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
   return [storyboard instantiateViewControllerWithIdentifier:identifier];
 }
