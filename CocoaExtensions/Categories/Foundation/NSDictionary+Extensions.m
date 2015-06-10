@@ -45,7 +45,7 @@
 
 - (NSDate *)ce_dateForKey:(NSString *)key withFormatter:(NSDateFormatter *)dateFormatter {
   NSString * obj = [self objectForKey:key];
-  if ([NSString isPresent:obj]) {
+  if ([NSString ce_isPresent:obj]) {
     return [dateFormatter dateFromString:obj];
   }
   return nil;

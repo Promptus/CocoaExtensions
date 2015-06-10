@@ -13,11 +13,11 @@
 
 #pragma mark Regular expressions
 
-- (NSArray*)match:(NSString*)pattern {
-  return [self match:pattern options:0];
+- (NSArray*)ce_match:(NSString*)pattern {
+  return [self ce_match:pattern options:0];
 }
 
-- (NSArray*)match:(NSString*)pattern options:(NSRegularExpressionOptions)options {
+- (NSArray*)ce_match:(NSString *)pattern options:(NSRegularExpressionOptions)options {
   NSRegularExpression * regex = [NSRegularExpression regularExpressionWithPattern:pattern options:options error:nil];
   NSTextCheckingResult * result = [regex firstMatchInString:self options:0 range:NSMakeRange(0, [self length])];
   NSMutableArray * matches = [NSMutableArray arrayWithCapacity:[result numberOfRanges]];
@@ -30,11 +30,11 @@
   return matches;
 }
 
-- (NSArray*)scan:(NSString*)pattern {
-  return [self scan:pattern options:0];
+- (NSArray*)ce_scan:(NSString*)pattern {
+  return [self ce_scan:pattern options:0];
 }
 
-- (NSArray*)scan:(NSString*)pattern options:(NSRegularExpressionOptions)options {
+- (NSArray*)ce_scan:(NSString *)pattern options:(NSRegularExpressionOptions)options {
   NSRegularExpression * regex = [NSRegularExpression regularExpressionWithPattern:pattern options:options error:nil];
   NSArray * result = [regex matchesInString:self options:0 range:NSMakeRange(0, [self length])];
   NSMutableArray * matches = [NSMutableArray arrayWithCapacity:result.count];
@@ -45,27 +45,27 @@
   return matches;
 }
 
-+ (BOOL)isBlank:(NSString*)string {
-  return ![NSString isPresent:string];
++ (BOOL)ce_isBlank:(NSString*)string {
+  return ![NSString ce_isPresent:string];
 }
 
-+ (BOOL)isPresent:(NSString*)string {
++ (BOOL)ce_isPresent:(NSString*)string {
   return [string isKindOfClass:[NSString class]] && ![string isEqualToString:@""];
 }
 
-- (BOOL)isBlank {
-  return [NSString isBlank:self];
+- (BOOL)ce_isBlank {
+  return [NSString ce_isBlank:self];
 }
 
-- (BOOL)isPresent {
-  return [NSString isPresent:self];
+- (BOOL)ce_isPresent {
+  return [NSString ce_isPresent:self];
 }
 
-+ (NSString*)blankDefault:(id)value {
++ (NSString*)ce_blankDefault:(id)value {
   return [value isKindOfClass:[NSString class]] ? value : @"";
 }
 
-- (NSString *)urlStringUsingEncoding:(NSStringEncoding)encoding {
+- (NSString *)ce_urlStringUsingEncoding:(NSStringEncoding)encoding {
   NSString *charactersToLeaveUnescaped = @"!*'\"();:@&=+$,/?%#[]% ";
   return (NSString *) CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,
                                                                                 (CFStringRef) self,
@@ -74,7 +74,7 @@
                                                                                 CFStringConvertNSStringEncodingToEncoding(encoding)));
 }
 
-- (NSString *)removeAllWhiteSpaces {
+- (NSString *)ce_removeAllWhiteSpaces {
     return [self stringByReplacingOccurrencesOfString:@"\\s" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [self length])];
 }
 

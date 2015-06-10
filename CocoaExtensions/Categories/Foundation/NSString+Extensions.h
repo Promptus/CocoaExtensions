@@ -12,19 +12,19 @@
 @interface NSString (Extensions)
 
 #pragma mark Regular expressions
-- (NSArray*)match:(NSString*)pattern;
-- (NSArray*)match:(NSString*)pattern options:(NSRegularExpressionOptions)options;
-- (NSArray*)scan:(NSString*)pattern;
-- (NSArray*)scan:(NSString*)pattern options:(NSRegularExpressionOptions)options;
+- (NSArray*)ce_match:(NSString*)pattern;
+- (NSArray*)ce_match:(NSString *)pattern options:(NSRegularExpressionOptions)options;
+- (NSArray*)ce_scan:(NSString*)pattern;
+- (NSArray*)ce_scan:(NSString *)pattern options:(NSRegularExpressionOptions)options;
 
-+ (BOOL)isPresent:(NSString*)string;
-+ (BOOL)isBlank:(NSString*)string;
-- (BOOL)isPresent;
-- (BOOL)isBlank;
++ (BOOL)ce_isPresent:(NSString*)string;
++ (BOOL)ce_isBlank:(NSString*)string;
+- (BOOL)ce_isPresent;
+- (BOOL)ce_isBlank;
 
-+ (NSString*)blankDefault:(id)value;
++ (NSString*)ce_blankDefault:(id)value;
 
-- (NSString *)urlStringUsingEncoding:(NSStringEncoding)encoding;
-- (NSString *)removeAllWhiteSpaces;
+- (NSString *)ce_urlStringUsingEncoding:(NSStringEncoding)encoding;
+- (NSString *)ce_removeAllWhiteSpaces;
 
 @end

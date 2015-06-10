@@ -33,7 +33,7 @@
 
 - (id)initWebViewControllerWithURLString:(NSString *)_urlString {
   if (self = [super init]) {
-    _urlString = [_urlString urlStringUsingEncoding:NSUTF8StringEncoding];
+    _urlString = [_urlString ce_urlStringUsingEncoding:NSUTF8StringEncoding];
     if ([_urlString hasPrefix:@"http://"] || [_urlString hasPrefix:@"https://"]) {
       self.urlString = _urlString;
     } else {
@@ -92,7 +92,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)_webView {
   NSString *title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-  navigationBar.topItem.title = [NSString isBlank:title] ? webView.request.URL.absoluteString : title;
+  navigationBar.topItem.title = [NSString ce_isBlank:title] ? webView.request.URL.absoluteString : title;
   backButton.enabled = [webView canGoBack];
   forwardButton.enabled = [webView canGoForward];
 }
