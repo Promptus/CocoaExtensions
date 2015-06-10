@@ -23,19 +23,19 @@
 }
 
 + (id)ce_find:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
-  return [context fetchObjectForEntity:[self ce_entityName] predicate:predicate];
+  return [context ce_fetchObjectForEntity:[self ce_entityName] predicate:predicate];
 }
 
 + (id)ce_find:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context {
-  return [context fetchObjectForEntity:[self ce_entityName] predicate:predicate sortDescriptors:sortDescriptors];
+  return [context ce_fetchObjectForEntity:[self ce_entityName] predicate:predicate sortDescriptors:sortDescriptors];
 }
 
 + (NSArray*)ce_all:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
-  return [context fetchObjectsForEntity:[self ce_entityName] predicate:predicate];
+  return [context ce_fetchObjectsForEntity:[self ce_entityName] predicate:predicate];
 }
 
 + (NSArray *)ce_all:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context {
-  return [context fetchObjectsForEntity:[self ce_entityName] predicate:predicate sortDescriptors:sortDescriptors];
+  return [context ce_fetchObjectsForEntity:[self ce_entityName] predicate:predicate sortDescriptors:sortDescriptors];
 }
 
 + (NSUInteger)ce_count:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
