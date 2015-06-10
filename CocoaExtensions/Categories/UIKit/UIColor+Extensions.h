@@ -10,7 +10,7 @@
 
 @interface UIColor (Extensions)
 
-+ (UIColor *)colorWithHex:(UInt32)hexadecimal;
-+ (UIColor *)colorWithAlphaHex:(UInt32)hexadecimal;
++ (UIColor *)ce_colorWithHex:(UInt32)hexadecimal;
++ (UIColor *)ce_colorWithAlphaHex:(UInt32)hexadecimal;
 
 @end
