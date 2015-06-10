@@ -30,7 +30,7 @@
 #pragma mark map
 
 - (void)testMap {
-  NSArray * result = [sample map:^(NSNumber * item) {
+  NSArray * result = [sample ce_map:^(NSNumber *item) {
     return [item stringValue];
   }];
   XCTAssertTrue([[result objectAtIndex:0] isEqualToString:@"1"], @"");
@@ -38,16 +38,16 @@
 }
 
 - (void)testSelect {
-  NSArray * result = [sample select:^(NSNumber * item) {
-    return (BOOL)([item intValue] == 1);
+  NSArray * result = [sample ce_select:^(NSNumber *item) {
+    return (BOOL) ([item intValue] == 1);
   }];
   XCTAssertTrue(result.count == (NSUInteger)1, @"");
   XCTAssertTrue([[result objectAtIndex:0] intValue] == 1, @"");
 }
 
 - (void)testReject {
-  NSArray * result = [sample reject:^(NSNumber * item) {
-    return (BOOL)([item intValue] % 2 == 0);
+  NSArray * result = [sample ce_reject:^(NSNumber *item) {
+    return (BOOL) ([item intValue] % 2 == 0);
   }];
   XCTAssertTrue(result.count == (NSUInteger)2, @"");
   XCTAssertTrue([[result objectAtIndex:0] intValue] == 1, @"");

@@ -9,34 +9,34 @@
 
 @implementation NSArray(Extensions)
 
-- (void)each:(void (^)(id item))block {
+- (void)ce_each:(void (^)(id item))block {
   NSParameterAssert(block != nil);
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     block(obj);
   }];
 }
 
-- (void)eachWithIndex:(void (^)(id item, NSUInteger index))block {
+- (void)ce_eachWithIndex:(void (^)(id item, NSUInteger index))block {
   NSParameterAssert(block != nil);
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     block(obj, idx);
   }];
 }
 
-- (NSArray *)select:(BOOL (^)(id item))block {
+- (NSArray *)ce_select:(BOOL (^)(id item))block {
   NSParameterAssert(block != nil);
   return [self objectsAtIndexes:[self indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
     return block(obj);
   }]];
 }
 
-- (NSArray *)reject:(BOOL (^)(id item))block {
-  return [self select:^BOOL(id obj) {
+- (NSArray *)ce_reject:(BOOL (^)(id item))block {
+  return [self ce_select:^BOOL(id obj) {
     return !block(obj);
   }];
 }
 
-- (NSArray *)map:(id (^)(id item))block {
+- (NSArray *)ce_map:(id (^)(id item))block {
   NSParameterAssert(block != nil);
   NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {

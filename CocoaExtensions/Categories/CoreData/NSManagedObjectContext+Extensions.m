@@ -150,16 +150,16 @@
     NSError *error = nil;
     NSArray *objects = [context executeFetchRequest:fetchRequest error:&error];
     NSMutableArray *objectIds = [NSMutableArray arrayWithCapacity:objects.count];
-    
-    [objects each:^(id item) {
-      [objectIds addObject:[(NSManagedObject *)item objectID]];
+
+    [objects ce_each:^(id item) {
+      [objectIds addObject:[(NSManagedObject *) item objectID]];
     }];
     
     dispatch_async(dispatch_get_main_queue(), ^{
       NSMutableArray *resultObjects = [NSMutableArray arrayWithCapacity:objectIds.count];
-      
-      [objectIds each:^(id item) {
-        [resultObjects addObject:[self objectWithID:(NSManagedObjectID *)item]];
+
+      [objectIds ce_each:^(id item) {
+        [resultObjects addObject:[self objectWithID:(NSManagedObjectID *) item]];
       }];
       
       callback([NSArray arrayWithArray:resultObjects], error);
@@ -179,10 +179,10 @@
   NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntity:[NSEntityDescription entityForName:entity inManagedObjectContext:self] predicate:predicate];
   
   NSArray *results = [self executeFetchRequest:fetchRequest error:&error];
-  
-  [results each:^(id item) {
-    NSManagedObject *object = (NSManagedObject *)item;
-    if([object validateForDelete:&error])
+
+  [results ce_each:^(id item) {
+    NSManagedObject *object = (NSManagedObject *) item;
+    if ([object validateForDelete:&error])
       NSLog(@"CoreData Delete error: %@", [error userInfo]);
     else
       [self deleteObject:object];
