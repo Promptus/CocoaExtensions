@@ -20,7 +20,7 @@
   @property (nonatomic, assign) CGFloat height;
   @property (nonatomic, assign) CGFloat width;
 
--(void) shiftX:(float) offset;
--(void) shiftY:(float) offset;
+-(void)ce_shiftX:(float) offset;
+-(void)ce_shiftY:(float) offset;
 
 @end
