@@ -11,9 +11,9 @@
 
 @interface NSDictionary (Extensions)
 
-- (NSString*)stringForKey:(NSString*)key;
-- (NSNumber*)numberForKey:(NSString*)key;
-- (NSDecimalNumber*)decimalNumberForKey:(NSString*)key;
-- (NSDate *)dateForKey:(NSString *)key withFormatter:(NSDateFormatter *)dateFormatter;
+- (NSString*)ce_stringForKey:(NSString*)key;
+- (NSNumber*)ce_numberForKey:(NSString*)key;
+- (NSDecimalNumber*)ce_decimalNumberForKey:(NSString*)key;
+- (NSDate *)ce_dateForKey:(NSString *)key withFormatter:(NSDateFormatter *)dateFormatter;
 
 @end
