@@ -10,7 +10,7 @@
 
 @implementation NSSet (Extensions)
 
-+ (NSMutableSet*)setWithEnumerable:(id<NSFastEnumeration>)enumerable creationBlock:(NSObject*(^)(NSDictionary * data))creationBlock {
++ (NSMutableSet*)ce_setWithEnumerable:(id <NSFastEnumeration>)enumerable creationBlock:(NSObject*(^)(NSDictionary * data))creationBlock {
   NSMutableSet * set = [NSMutableSet set];
   for (NSDictionary * dict in enumerable) {
     NSObject * object = creationBlock(dict);
