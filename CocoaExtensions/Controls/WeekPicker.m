@@ -58,12 +58,12 @@
   weeks = [NSMutableArray arrayWithCapacity:self.numberOfItems];
   int halfNumberOfWeeks = (int)(-7*(self.numberOfItems/2));
   NSNumber * weeksAgo = [NSNumber numberWithInt:halfNumberOfWeeks];
-  NSDate * currentWeekDate = [[NSDate date] ce_advance:[weeksAgo days] calendar:self.calendar];
+  NSDate * currentWeekDate = [[NSDate date] ce_advance:[weeksAgo ce_days] calendar:self.calendar];
   NSDate * lastWeekDate = currentWeekDate;
   [weeks addObject:[self buildItemDictionary:currentWeekDate lastDate:nil]];
   int initialWeekIndex = -1;
   for (int i = 0; i < self.numberOfItems; i++) {
-    currentWeekDate = [currentWeekDate ce_advance:[@7 days] calendar:self.calendar];
+    currentWeekDate = [currentWeekDate ce_advance:[@7 ce_days] calendar:self.calendar];
     NSDictionary * dict = [self buildItemDictionary:currentWeekDate lastDate:lastWeekDate];
     [weeks addObject:dict];
     if ([[dict objectForKey:@"weekLabel"] isEqualToString:initialWeekLabel] && [currentWeekDate ce_year:self.calendar] == initialYear) {

@@ -10,12 +10,12 @@
 
 @interface NSNumber (Extensions)
 
-- (NSString *)formattedEuro;
-- (NSString *)formattedRoundedEuroWithoutDecimals;
-- (NSDecimalNumber*)decimalNumberDividedByFloat:(float)divider;
-- (NSInteger)minutes;
-- (NSInteger)hours;
-- (NSInteger)days;
-- (NSString*)formattedString:(NSLocale*)locale;
+- (NSString *)ce_formattedEuro;
+- (NSString *)ce_formattedRoundedEuroWithoutDecimals;
+- (NSDecimalNumber*)ce_decimalNumberDividedByFloat:(float)divider;
+- (NSInteger)ce_minutes;
+- (NSInteger)ce_hours;
+- (NSInteger)ce_days;
+- (NSString*)ce_formattedString:(NSLocale*)locale;
 
 @end

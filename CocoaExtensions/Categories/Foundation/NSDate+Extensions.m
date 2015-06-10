@@ -17,11 +17,11 @@
 }
 
 - (NSDate *)ce_tomorrow:(NSCalendar*)calendar {
-  return [self ce_advance:[@1 days] calendar:calendar];
+  return [self ce_advance:[@1 ce_days] calendar:calendar];
 }
 
 - (NSDate *)ce_yesterday:(NSCalendar*)calendar {
-  return [self ce_advance:[@-1 days] calendar:calendar];
+  return [self ce_advance:[@-1 ce_days] calendar:calendar];
 }
 
 - (NSDate *)ce_beginningOfWeek:(NSCalendar*)calendar {
@@ -99,7 +99,7 @@
 -(BOOL)ce_isTomorrow:(NSCalendar *)calendar {
   int mask = NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay;
   NSDateComponents *components = [calendar components:(mask) fromDate:[NSDate date]];
-  NSDate *tomorrow = [[calendar dateFromComponents:components] ce_advance:[@1 days] calendar:calendar];
+  NSDate *tomorrow = [[calendar dateFromComponents:components] ce_advance:[@1 ce_days] calendar:calendar];
   components = [calendar components:(mask) fromDate:self];
   NSDate *otherDate = [calendar dateFromComponents:components];
   return [tomorrow isEqualToDate:otherDate];
