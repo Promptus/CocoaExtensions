@@ -12,10 +12,10 @@ typedef void (^FetchObjectCallback)(id fetchedObject, NSError * error);
 
 @interface NSFetchRequest(Extensions)
 
-+ (id)fetchRequestWithEntity:(NSEntityDescription *)entity;
-+ (id)fetchRequestWithEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate;
-+ (id)fetchRequestWithEntity:(NSEntityDescription *)entity sortDescriptors:(NSArray *)sortDescriptors;
-+ (id)fetchRequestWithEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors;
++ (id)ce_fetchRequestWithEntity:(NSEntityDescription *)entity;
++ (id)ce_fetchRequestWithEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate;
++ (id)ce_fetchRequestWithEntity:(NSEntityDescription *)entity sortDescriptors:(NSArray *)sortDescriptors;
++ (id)ce_fetchRequestWithEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors;
 
 - (id)initWithEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors;
 

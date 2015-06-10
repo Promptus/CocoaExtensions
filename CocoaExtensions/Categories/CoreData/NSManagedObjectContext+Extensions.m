@@ -36,7 +36,7 @@
 
 - (NSArray *)fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors fetchLimit:(NSUInteger)limit
 {
-  NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntity:[NSEntityDescription entityForName:entity inManagedObjectContext:self] predicate:predicate sortDescriptors:sortDescriptors];
+  NSFetchRequest *request = [NSFetchRequest ce_fetchRequestWithEntity:[NSEntityDescription entityForName:entity inManagedObjectContext:self] predicate:predicate sortDescriptors:sortDescriptors];
   if (limit > 0)
     [request setFetchLimit:limit];
   
@@ -176,7 +176,7 @@
 - (void)deleteEntity:(NSString *)entity withPredicate:(NSPredicate *)predicate
 {
   NSError __block *error = nil;
-  NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntity:[NSEntityDescription entityForName:entity inManagedObjectContext:self] predicate:predicate];
+  NSFetchRequest *fetchRequest = [NSFetchRequest ce_fetchRequestWithEntity:[NSEntityDescription entityForName:entity inManagedObjectContext:self] predicate:predicate];
   
   NSArray *results = [self executeFetchRequest:fetchRequest error:&error];
 
