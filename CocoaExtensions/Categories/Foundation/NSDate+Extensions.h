@@ -11,26 +11,26 @@
 
 @interface NSDate (Extensions)
 
-- (NSDate *)advance:(NSInteger)seconds calendar:(NSCalendar*)calendar;
-- (NSDate *)yesterday:(NSCalendar*)calendar;
-- (NSDate *)tomorrow:(NSCalendar*)calendar;
-- (NSDate *)beginningOfWeek:(NSCalendar*)calendar;
-- (NSDate *)endOfWeek:(NSCalendar*)calendar;
-- (NSDate *)beginningOfDay:(NSCalendar*)calendar;
-- (NSDate *)endOfDay:(NSCalendar*)calendar;
-- (NSUInteger)calendarWeek:(NSCalendar *)calendar;
-- (NSUInteger)second:(NSCalendar *)calendar;
-- (NSUInteger)minute:(NSCalendar *)calendar;
-- (NSUInteger)hour:(NSCalendar *)calendar;
-- (NSUInteger)day:(NSCalendar *)calendar;
-- (NSUInteger)month:(NSCalendar *)calendar;
-- (NSUInteger)year:(NSCalendar *)calendar;
-- (BOOL)isToday:(NSCalendar *)calendar;
-- (BOOL)isTomorrow:(NSCalendar *)calendar;
-- (BOOL)isLaterThan:(NSDate*)date;
-- (BOOL)isEarlierThan:(NSDate *)date;
+- (NSDate *)ce_advance:(NSInteger)seconds calendar:(NSCalendar*)calendar;
+- (NSDate *)ce_yesterday:(NSCalendar*)calendar;
+- (NSDate *)ce_tomorrow:(NSCalendar*)calendar;
+- (NSDate *)ce_beginningOfWeek:(NSCalendar*)calendar;
+- (NSDate *)ce_endOfWeek:(NSCalendar*)calendar;
+- (NSDate *)ce_beginningOfDay:(NSCalendar*)calendar;
+- (NSDate *)ce_endOfDay:(NSCalendar*)calendar;
+- (NSUInteger)ce_calendarWeek:(NSCalendar *)calendar;
+- (NSUInteger)ce_second:(NSCalendar *)calendar;
+- (NSUInteger)ce_minute:(NSCalendar *)calendar;
+- (NSUInteger)ce_hour:(NSCalendar *)calendar;
+- (NSUInteger)ce_day:(NSCalendar *)calendar;
+- (NSUInteger)ce_month:(NSCalendar *)calendar;
+- (NSUInteger)ce_year:(NSCalendar *)calendar;
+- (BOOL)ce_isToday:(NSCalendar *)calendar;
+- (BOOL)ce_isTomorrow:(NSCalendar *)calendar;
+- (BOOL)ce_isLaterThan:(NSDate*)date;
+- (BOOL)ce_isEarlierThan:(NSDate *)date;
 
-- (NSString*)formattedString:(NSString*)format;
-- (NSDate *)dateWithHour:(NSUInteger)hour minute:(NSUInteger)min second:(NSUInteger)sec calendar:(NSCalendar*)calendar;
+- (NSString*)ce_formattedString:(NSString*)format;
+- (NSDate *)ce_dateWithHour:(NSUInteger)hour minute:(NSUInteger)min second:(NSUInteger)sec calendar:(NSCalendar*)calendar;
 
 @end

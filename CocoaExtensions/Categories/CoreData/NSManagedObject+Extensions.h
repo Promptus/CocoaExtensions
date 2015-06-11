@@ -11,14 +11,14 @@
 
 @interface NSManagedObject (Extensions)
 
-+ (id)create:(NSManagedObjectContext*)context;
-+ (id)create:(NSDictionary*)dict inContext:(NSManagedObjectContext*)context;
-+ (id)find:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context;
-+ (id)find:(NSPredicate *)predicate sortDescriptors:(NSArray*)sortDescriptors inContext:(NSManagedObjectContext *)context;
-+ (NSArray*)all:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context;
-+ (NSArray*)all:(NSPredicate *)predicate sortDescriptors:(NSArray*)sortDescriptors inContext:(NSManagedObjectContext *)context;
-+ (NSUInteger)count:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)contex;
-+ (NSString *)entityName;
-+ (NSError*)deleteAll:(NSManagedObjectContext*)context;
++ (id)ce_create:(NSManagedObjectContext*)context;
++ (id)ce_create:(NSDictionary *)dict inContext:(NSManagedObjectContext*)context;
++ (id)ce_find:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context;
++ (id)ce_find:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context;
++ (NSArray*)ce_all:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context;
++ (NSArray*)ce_all:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context;
++ (NSUInteger)ce_count:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)contex;
++ (NSString *)ce_entityName;
++ (NSError*)ce_deleteAll:(NSManagedObjectContext*)context;
 
 @end

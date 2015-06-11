@@ -10,7 +10,7 @@
 
 @implementation NSNumber (Extensions)
 
-- (NSString *)formattedEuro {
+- (NSString *)ce_formattedEuro {
   static NSNumberFormatter *formatter;
   if (formatter == nil) {
     formatter = [[NSNumberFormatter alloc] init];
@@ -22,7 +22,7 @@
   return [formatter stringFromNumber:self];
 }
 
-- (NSString *)formattedRoundedEuroWithoutDecimals {
+- (NSString *)ce_formattedRoundedEuroWithoutDecimals {
   static NSNumberFormatter *formatter;
   if (formatter == nil) {
     formatter = [[NSNumberFormatter alloc] init];
@@ -35,24 +35,24 @@
   return [formatter stringFromNumber:self];
 }
 
-- (NSDecimalNumber*)decimalNumberDividedByFloat:(float)divider {
+- (NSDecimalNumber*)ce_decimalNumberDividedByFloat:(float)divider {
   NSDecimal decimal = [[NSNumber numberWithFloat:[self integerValue]/divider] decimalValue];
   return [NSDecimalNumber decimalNumberWithDecimal:decimal];
 }
 
-- (NSInteger)minutes {
+- (NSInteger)ce_minutes {
   return [self integerValue] * 60;
 }
 
-- (NSInteger)hours {
-  return [self minutes] * 60;
+- (NSInteger)ce_hours {
+  return [self ce_minutes] * 60;
 }
 
-- (NSInteger)days {
-  return [self hours] * 24;
+- (NSInteger)ce_days {
+  return [self ce_hours] * 24;
 }
 
-- (NSString*)formattedString:(NSLocale *)locale {
+- (NSString*)ce_formattedString:(NSLocale *)locale {
   static NSNumberFormatter * formatter;
   if (formatter == nil)
     formatter = [[NSNumberFormatter alloc] init];

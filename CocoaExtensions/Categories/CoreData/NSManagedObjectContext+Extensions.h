@@ -21,30 +21,30 @@ typedef void (^ContextObjectsCallback)(NSManagedObjectContext *context, NSArray 
 @property (nonatomic, readonly) NSManagedObjectModel *objectModel;
 
 #pragma mark - Sync methods
-- (NSArray *)fetchObjectsForEntity:(NSString *)entity;
-- (NSArray *)fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate;
-- (NSArray *)fetchObjectsForEntity:(NSString *)entity sortDescriptors:(NSArray *)sortDescriptors;
-- (NSArray *)fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors;
-- (NSArray *)fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors fetchLimit:(NSUInteger)limit;
-- (id)fetchObjectForEntity:(NSString *)entity;
-- (id)fetchObjectForEntity:(NSString *)entity predicate:(NSPredicate *)predicate;
-- (id)fetchObjectForEntity:(NSString *)entity sortDescriptors:(NSArray *)sortDescriptors;
-- (id)fetchObjectForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors;
+- (NSArray *)ce_fetchObjectsForEntity:(NSString *)entity;
+- (NSArray *)ce_fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate;
+- (NSArray *)ce_fetchObjectsForEntity:(NSString *)entity sortDescriptors:(NSArray *)sortDescriptors;
+- (NSArray *)ce_fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors;
+- (NSArray *)ce_fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors fetchLimit:(NSUInteger)limit;
+- (id)ce_fetchObjectForEntity:(NSString *)entity;
+- (id)ce_fetchObjectForEntity:(NSString *)entity predicate:(NSPredicate *)predicate;
+- (id)ce_fetchObjectForEntity:(NSString *)entity sortDescriptors:(NSArray *)sortDescriptors;
+- (id)ce_fetchObjectForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors;
 
 #pragma mark - Async Methods
-- (void)fetchObjectsForEntity:(NSString *)entity callback:(FetchObjectsCallback)callback;
-- (void)fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate callback:(FetchObjectsCallback)callback;
-- (void)fetchObjectsForEntity:(NSString *)entity sortDescriptors:(NSArray *)sortDescriptors callback:(FetchObjectsCallback)callback;
-- (void)fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors callback:(FetchObjectsCallback)callback;
+- (void)ce_fetchObjectsForEntity:(NSString *)entity callback:(FetchObjectsCallback)callback;
+- (void)ce_fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate callback:(FetchObjectsCallback)callback;
+- (void)ce_fetchObjectsForEntity:(NSString *)entity sortDescriptors:(NSArray *)sortDescriptors callback:(FetchObjectsCallback)callback;
+- (void)ce_fetchObjectsForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors callback:(FetchObjectsCallback)callback;
 
-- (void)fetchObjectForEntity:(NSString *)entity callback:(FetchObjectCallback)callback;
-- (void)fetchObjectForEntity:(NSString *)entity predicate:(NSPredicate *)predicate callback:(FetchObjectCallback)callback;
-- (void)fetchObjectForEntity:(NSString *)entity sortDescriptors:(NSArray *)sortDescriptors callback:(FetchObjectCallback)callback;
-- (void)fetchObjectForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors callback:(FetchObjectCallback)callback;
+- (void)ce_fetchObjectForEntity:(NSString *)entity callback:(FetchObjectCallback)callback;
+- (void)ce_fetchObjectForEntity:(NSString *)entity predicate:(NSPredicate *)predicate callback:(FetchObjectCallback)callback;
+- (void)ce_fetchObjectForEntity:(NSString *)entity sortDescriptors:(NSArray *)sortDescriptors callback:(FetchObjectCallback)callback;
+- (void)ce_fetchObjectForEntity:(NSString *)entity predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors callback:(FetchObjectCallback)callback;
 
-- (void)fetchRequest:(NSFetchRequest *)fetchRequest withCallback:(FetchObjectsCallback)callback;
+- (void)ce_fetchRequest:(NSFetchRequest *)fetchRequest withCallback:(FetchObjectsCallback)callback;
 
 #pragma mark - Insert New Entity
-- (id)insertEntity:(NSString *)entity;
-- (void)deleteEntity:(NSString *)entity withPredicate:(NSPredicate *)predicate;
+- (id)ce_insertEntity:(NSString *)entity;
+- (void)ce_deleteEntity:(NSString *)entity withPredicate:(NSPredicate *)predicate;
 @end

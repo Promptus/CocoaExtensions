@@ -10,7 +10,7 @@
 
 @implementation UIButton (Extensions)
 
-- (void)setBackgroundColor:(UIColor *)color forState:(UIControlState)state {
+- (void)ce_setBackgroundColor:(UIColor *)color forState:(UIControlState)state {
   UIView *colorView = [[UIView alloc] initWithFrame:self.frame];
   colorView.backgroundColor = color;
   

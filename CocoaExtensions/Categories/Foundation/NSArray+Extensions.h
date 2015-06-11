@@ -9,10 +9,10 @@
 
 @interface NSArray(Extensions)
 
-- (void)each:(void (^)(id item))block;
-- (void)eachWithIndex:(void (^)(id item, NSUInteger index))block;
-- (NSArray *)select:(BOOL (^)(id item))block;
-- (NSArray *)reject:(BOOL (^)(id item))block;
-- (NSArray *)map:(id (^)(id item))block;
+- (void)ce_each:(void (^)(id item))block;
+- (void)ce_eachWithIndex:(void (^)(id item, NSUInteger index))block;
+- (NSArray *)ce_select:(BOOL (^)(id item))block;
+- (NSArray *)ce_reject:(BOOL (^)(id item))block;
+- (NSArray *)ce_map:(id (^)(id item))block;
 
 @end

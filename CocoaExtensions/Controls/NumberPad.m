@@ -50,7 +50,7 @@
         int column = i%3;
         int row = i/3;
         button.frame = CGRectMake(column+(column*buttonWidth), row+(row*buttonHeight), buttonWidth, buttonHeight);
-        [button setBackgroundColor:self.tintColor forState:UIControlStateHighlighted];
+        [button ce_setBackgroundColor:self.tintColor forState:UIControlStateHighlighted];
         [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
         i++;
         

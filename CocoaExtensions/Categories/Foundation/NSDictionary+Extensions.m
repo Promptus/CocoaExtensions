@@ -10,7 +10,7 @@
 
 @implementation NSDictionary (Extensions)
 
-- (NSString *)stringForKey:(NSString*)key {
+- (NSString *)ce_stringForKey:(NSString*)key {
   id obj = [self objectForKey:key];
   if ([obj isKindOfClass:[NSString class]]) {
     return obj;
@@ -18,7 +18,7 @@
   return nil;
 }
 
-- (NSDecimalNumber *)decimalNumberForKey:(NSString*)key {
+- (NSDecimalNumber *)ce_decimalNumberForKey:(NSString*)key {
   id obj = [self objectForKey:key];
   if ([obj isKindOfClass:[NSDecimalNumber class]]) {
     return obj;
@@ -32,7 +32,7 @@
   return nil;
 }
 
-- (NSNumber *)numberForKey:(NSString*)key {
+- (NSNumber *)ce_numberForKey:(NSString*)key {
   id obj = [self objectForKey:key];
   if ([obj isKindOfClass:[NSNumber class]]) {
     return obj;
@@ -43,9 +43,9 @@
   return nil;
 }
 
-- (NSDate *)dateForKey:(NSString *)key withFormatter:(NSDateFormatter *)dateFormatter {
+- (NSDate *)ce_dateForKey:(NSString *)key withFormatter:(NSDateFormatter *)dateFormatter {
   NSString * obj = [self objectForKey:key];
-  if ([NSString isPresent:obj]) {
+  if ([NSString ce_isPresent:obj]) {
     return [dateFormatter dateFromString:obj];
   }
   return nil;

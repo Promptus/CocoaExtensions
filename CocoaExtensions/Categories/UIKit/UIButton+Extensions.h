@@ -11,6 +11,6 @@
 
 @interface UIButton (Extensions)
 
-- (void)setBackgroundColor:(UIColor *)color forState:(UIControlState)state;
+- (void)ce_setBackgroundColor:(UIColor *)color forState:(UIControlState)state;
 
 @end

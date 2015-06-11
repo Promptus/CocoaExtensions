@@ -10,6 +10,6 @@
 
 @interface UIStoryboard (Extensions)
 
-+ (id)instantiateViewControllerWithIdentifier:(NSString*)identifier fromStoryboard:(NSString*)storyboardName;
++ (id)ce_instantiateViewControllerWithIdentifier:(NSString *)identifier fromStoryboard:(NSString*)storyboardName;
 
 @end

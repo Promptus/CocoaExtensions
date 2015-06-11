@@ -8,31 +8,31 @@
 
 #pragma mark Alpha
 
-- (BOOL)hasAlpha;
-- (UIImage *)imageWithAlpha;
-- (UIImage *)transparentBorderImage:(NSUInteger)borderSize;
+- (BOOL)ce_hasAlpha;
+- (UIImage *)ce_imageWithAlpha;
+- (UIImage *)ce_transparentBorderImage:(NSUInteger)borderSize;
 
 #pragma mark Resize
 
-- (UIImage *)croppedImage:(CGRect)bounds;
-- (UIImage *)thumbnailImage:(NSInteger)thumbnailSize
-          transparentBorder:(NSUInteger)borderSize
-               cornerRadius:(NSUInteger)cornerRadius
-       interpolationQuality:(CGInterpolationQuality)quality;
-- (UIImage *)resizedImage:(CGSize)newSize
-     interpolationQuality:(CGInterpolationQuality)quality;
-- (UIImage *)resizedImageWithContentMode:(UIViewContentMode)contentMode
-                                  bounds:(CGSize)bounds
-                    interpolationQuality:(CGInterpolationQuality)quality;
+- (UIImage *)ce_croppedImage:(CGRect)bounds;
+- (UIImage *)ce_thumbnailImage:(NSInteger)thumbnailSize
+             transparentBorder:(NSUInteger)borderSize
+                  cornerRadius:(NSUInteger)cornerRadius
+          interpolationQuality:(CGInterpolationQuality)quality;
+- (UIImage *)ce_resizedImage:(CGSize)newSize
+        interpolationQuality:(CGInterpolationQuality)quality;
+- (UIImage *)ce_resizedImageWithContentMode:(UIViewContentMode)contentMode
+                                     bounds:(CGSize)bounds
+                       interpolationQuality:(CGInterpolationQuality)quality;
 
 #pragma mark RoundedCorner
 
-- (UIImage *)roundedCornerImage:(NSInteger)cornerSize borderSize:(NSInteger)borderSize;
+- (UIImage *)ce_roundedCornerImage:(NSInteger)cornerSize borderSize:(NSInteger)borderSize;
 
-- (BOOL)isLandscape;
+- (BOOL)ce_isLandscape;
 
-- (UIImage *)tintedImageWithColor:(UIColor *)tintColor;
+- (UIImage *)ce_tintedImageWithColor:(UIColor *)tintColor;
 
-+ (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize) size;
++ (UIImage *)ce_imageWithColor:(UIColor *)color andSize:(CGSize) size;
 
 @end

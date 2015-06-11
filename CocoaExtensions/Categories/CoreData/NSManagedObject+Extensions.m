@@ -10,50 +10,50 @@
 
 @implementation NSManagedObject (Extensions)
 
-+ (id)create:(NSManagedObjectContext*)context {
-  return [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:context];
++ (id)ce_create:(NSManagedObjectContext*)context {
+  return [NSEntityDescription insertNewObjectForEntityForName:[self ce_entityName] inManagedObjectContext:context];
 }
 
-+ (id)create:(NSDictionary*)dict inContext:(NSManagedObjectContext*)context {
-  id instance = [self create:context];
++ (id)ce_create:(NSDictionary *)dict inContext:(NSManagedObjectContext*)context {
+  id instance = [self ce_create:context];
   [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
     [instance setValue:obj forKey:key];
   }];
   return instance;
 }
 
-+ (id)find:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
-  return [context fetchObjectForEntity:[self entityName] predicate:predicate];
++ (id)ce_find:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
+  return [context ce_fetchObjectForEntity:[self ce_entityName] predicate:predicate];
 }
 
-+ (id)find:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context {
-  return [context fetchObjectForEntity:[self entityName] predicate:predicate sortDescriptors:sortDescriptors];
++ (id)ce_find:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context {
+  return [context ce_fetchObjectForEntity:[self ce_entityName] predicate:predicate sortDescriptors:sortDescriptors];
 }
 
-+ (NSArray*)all:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
-  return [context fetchObjectsForEntity:[self entityName] predicate:predicate];
++ (NSArray*)ce_all:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
+  return [context ce_fetchObjectsForEntity:[self ce_entityName] predicate:predicate];
 }
 
-+ (NSArray *)all:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context {
-  return [context fetchObjectsForEntity:[self entityName] predicate:predicate sortDescriptors:sortDescriptors];
++ (NSArray *)ce_all:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context {
+  return [context ce_fetchObjectsForEntity:[self ce_entityName] predicate:predicate sortDescriptors:sortDescriptors];
 }
 
-+ (NSUInteger)count:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
++ (NSUInteger)ce_count:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
   NSFetchRequest *request = [[NSFetchRequest alloc] init];
-  NSEntityDescription *entity = [NSEntityDescription entityForName:[self entityName] inManagedObjectContext:context];
+  NSEntityDescription *entity = [NSEntityDescription entityForName:[self ce_entityName] inManagedObjectContext:context];
   [request setPredicate:predicate];
   [request setEntity:entity];
   NSError *error = nil;
   return [context countForFetchRequest:request error:&error];
 }
 
-+ (NSString *)entityName {
++ (NSString *)ce_entityName {
   return [NSString stringWithCString:object_getClassName(self) encoding:NSASCIIStringEncoding];
 }
 
-+ (NSError*)deleteAll:(NSManagedObjectContext*)context {
++ (NSError*)ce_deleteAll:(NSManagedObjectContext*)context {
   NSFetchRequest * req = [[NSFetchRequest alloc] init];
-  [req setEntity:[NSEntityDescription entityForName:[self entityName] inManagedObjectContext:context]];
+  [req setEntity:[NSEntityDescription entityForName:[self ce_entityName] inManagedObjectContext:context]];
   [req setIncludesPropertyValues:NO]; //only fetch the managedObjectID
 
   NSError * error = nil;

@@ -12,7 +12,7 @@
 
 #pragma mark - Category Methods
 // Direct Conversion to hexadecimal (Automatic)
-+ (UIColor *)colorWithHex:(UInt32)hexadecimal {
++ (UIColor *)ce_colorWithHex:(UInt32)hexadecimal {
 	CGFloat red, green, blue;
   
 	// bitwise AND operation
@@ -27,7 +27,7 @@
 	return color;
 }
 
-+ (UIColor *)colorWithAlphaHex:(UInt32)hexadecimal {
++ (UIColor *)ce_colorWithAlphaHex:(UInt32)hexadecimal {
 	CGFloat red, green, blue, alpha;
   
 	// bitwise AND operation

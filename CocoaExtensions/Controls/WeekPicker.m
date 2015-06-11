@@ -54,19 +54,19 @@
 
 - (void)setupWeeks:(NSDate*)initialDate {
   NSString * initialWeekLabel = initialDate ? [self buildWeekLabel:initialDate] : @"";
-  NSInteger initialYear = initialDate ? [initialDate year:self.calendar] : -1;
+  NSInteger initialYear = initialDate ? [initialDate ce_year:self.calendar] : -1;
   weeks = [NSMutableArray arrayWithCapacity:self.numberOfItems];
   int halfNumberOfWeeks = (int)(-7*(self.numberOfItems/2));
   NSNumber * weeksAgo = [NSNumber numberWithInt:halfNumberOfWeeks];
-  NSDate * currentWeekDate = [[NSDate date] advance:[weeksAgo days] calendar:self.calendar];
+  NSDate * currentWeekDate = [[NSDate date] ce_advance:[weeksAgo ce_days] calendar:self.calendar];
   NSDate * lastWeekDate = currentWeekDate;
   [weeks addObject:[self buildItemDictionary:currentWeekDate lastDate:nil]];
   int initialWeekIndex = -1;
   for (int i = 0; i < self.numberOfItems; i++) {
-    currentWeekDate = [currentWeekDate advance:[@7 days] calendar:self.calendar];
+    currentWeekDate = [currentWeekDate ce_advance:[@7 ce_days] calendar:self.calendar];
     NSDictionary * dict = [self buildItemDictionary:currentWeekDate lastDate:lastWeekDate];
     [weeks addObject:dict];
-    if ([[dict objectForKey:@"weekLabel"] isEqualToString:initialWeekLabel] && [currentWeekDate year:self.calendar] == initialYear) {
+    if ([[dict objectForKey:@"weekLabel"] isEqualToString:initialWeekLabel] && [currentWeekDate ce_year:self.calendar] == initialYear) {
       initialWeekIndex = i+1;
     }
     lastWeekDate = currentWeekDate;
@@ -80,7 +80,7 @@
 
 - (NSDictionary*)buildItemDictionary:(NSDate *)currentDate lastDate:(NSDate *)lastDate {
   NSString * monthLabel = @"";
-  if (lastDate == nil || [currentDate month:self.calendar] != [lastDate month:self.calendar]) {
+  if (lastDate == nil || [currentDate ce_month:self.calendar] != [lastDate ce_month:self.calendar]) {
     monthLabel = [[self.monthAndYearFormatter stringFromDate:currentDate] uppercaseString];
   }
   NSString * weekLabel = [self buildWeekLabel:currentDate];

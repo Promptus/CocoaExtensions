@@ -154,14 +154,14 @@
   self.frame = newRect;
 }
 
--(void) shiftX:(float) offset
+-(void)ce_shiftX:(float) offset
 {
   CGRect newRect = self.frame;
   newRect.origin.x += offset;
   self.frame = newRect;
 }
 
--(void) shiftY:(float) offset
+-(void)ce_shiftY:(float) offset
 {
   CGRect newRect = self.frame;
   newRect.origin.y += offset;
