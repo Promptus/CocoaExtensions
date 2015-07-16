@@ -58,7 +58,7 @@
   NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
   if (coordinator != nil) {
     managedObjectContext = [[NSManagedObjectContext alloc] init];
-    managedObjectContext.mergePolicy = [[NSMergePolicy alloc] initWithMergeType:NSMergeByPropertyObjectTrumpMergePolicyType];
+    managedObjectContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy;
     [managedObjectContext setPersistentStoreCoordinator:coordinator];
   }
   return managedObjectContext;
@@ -67,6 +67,7 @@
 - (NSManagedObjectContext *)createManagedObjectContext {
   NSManagedObjectContext * context = [[NSManagedObjectContext alloc] init];
   [context setPersistentStoreCoordinator:[self persistentStoreCoordinator]];
+  context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy;
   return context;
 }
 
