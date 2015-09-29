@@ -13,11 +13,18 @@ Pod::Spec.new do |s|
   s.source_files = 'CocoaExtensions', 'CocoaExtensions/**/*.{h,m}'
   s.resources    = 'CocoaExtensions/**/*.{png,xib,xcassets}'
   s.requires_arc = true
+
   s.ios.deployment_target   = '7.0'
-  if s.respond_to?(:watchos)
-    s.watchos.deployment_target = '2.0'
+  s.watchos.deployment_target = '2.0'
+
+  s.subspec 'Reachability' do |ss|
+   ss.ios.deployment_target = '7.0'
+   ss.dependency   'Reachability', '~> 3.1.1'
   end
-  
-  s.dependency   'Reachability', '~> 3.1.1'
-  s.dependency   'iCarousel',    '~> 1.7'
+
+  s.subspec 'iCarousel' do |ss|
+    ss.ios.deployment_target = '7.0'
+    ss.dependency   'iCarousel',    '~> 1.7'
+  end
+
 end
