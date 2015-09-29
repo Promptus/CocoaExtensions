@@ -17,11 +17,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target   = '7.0'
   s.watchos.deployment_target = '2.0'
 
-  s.subspec 'Reachability' do |ss|
-   ss.ios.deployment_target = '7.0'
-   ss.dependency   'Reachability', '~> 3.1.1'
-   ss.frameworks = 'SystemConfiguration'
-  end
+  s.dependency   'Reachability', '~> 3.1.1'
 
   s.subspec 'iCarousel' do |ss|
     ss.ios.deployment_target = '7.0'
