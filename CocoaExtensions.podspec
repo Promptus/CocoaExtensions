@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "Lars Kuhnt" => "lars.kuhnt@gmail.com" }
   s.platform     = :ios, '6.0'
+  s.platform     = :watchos, ‘2.0’
   s.source       = { :git => "https://github.com/Promptus/CocoaExtensions.git" }
   s.source_files = 'CocoaExtensions', 'CocoaExtensions/**/*.{h,m}'
   s.resources    = 'CocoaExtensions/**/*.{png,xib,xcassets}'
