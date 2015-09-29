@@ -9,12 +9,14 @@ Pod::Spec.new do |s|
   s.homepage     = "http://github.com/Promptus/CocoaExtensions"
   s.license      = 'MIT'
   s.author       = { "Lars Kuhnt" => "lars.kuhnt@gmail.com" }
-  s.platform     = :ios, '6.0'
-  s.platform     = :watchos, ‘2.0’
   s.source       = { :git => "https://github.com/Promptus/CocoaExtensions.git" }
   s.source_files = 'CocoaExtensions', 'CocoaExtensions/**/*.{h,m}'
   s.resources    = 'CocoaExtensions/**/*.{png,xib,xcassets}'
   s.requires_arc = true
+  s.ios.deployment_target   = '7.0'
+  if s.respond_to?(:watchos)
+    s.watchos.deployment_target = '2.0'
+  end
   
   s.dependency   'Reachability', '~> 3.1.1'
   s.dependency   'iCarousel',    '~> 1.7'
