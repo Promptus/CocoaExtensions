@@ -21,6 +21,7 @@ Pod::Spec.new do |s|
    ss.ios.deployment_target = '7.0'
    ss.dependency   'Reachability', '~> 3.1.1'
    ss.source_files = 'Reachability.{h,m}'
+   ss.public_header_files = 'Reachability.h'
    ss.frameworks = 'SystemConfiguration'
   end
 
