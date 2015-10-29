@@ -78,4 +78,17 @@
     return [self stringByReplacingOccurrencesOfString:@"\\s" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [self length])];
 }
 
+- (NSString *)ce_truncateEmptyStringComponentsSeparatedByCharacter:(NSString *)stringSeparator {
+    NSMutableArray *finalStringComponents = [NSMutableArray new];
+    
+    NSArray *textComponents = [self componentsSeparatedByString:stringSeparator];
+    for (NSString *stringComponent in textComponents) {
+        if (![[stringComponent ce_removeAllWhiteSpaces] isEqualToString:@""]) {
+            [finalStringComponents addObject:stringComponent];
+        }
+    }
+    
+    return [finalStringComponents componentsJoinedByString:stringSeparator];
+}
+
 @end
