@@ -52,6 +52,8 @@
 		6FC5E1F81823A0CC00C15F70 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1E61823A0CC00C15F70 /* NSArray+Extensions.m */; };
 		6FF65EA018C872F900A5A2B5 /* UIButton+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF65E9F18C872F900A5A2B5 /* UIButton+Extensions.m */; };
 		6FF65EA318C8745100A5A2B5 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF65EA218C8745100A5A2B5 /* UIColor+Extensions.m */; };
+		A53145E41BE220320064D9C9 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53145E31BE220320064D9C9 /* StringExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		A53145E51BE220320064D9C9 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53145E31BE220320064D9C9 /* StringExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		C217432A3FED4296B14B1B62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E09CF0123F9D49128357691E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +149,7 @@
 		6FF65E9F18C872F900A5A2B5 /* UIButton+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extensions.m"; sourceTree = "<group>"; };
 		6FF65EA118C8745100A5A2B5 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
 		6FF65EA218C8745100A5A2B5 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
+		A53145E31BE220320064D9C9 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E09CF0123F9D49128357691E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -232,6 +235,7 @@
 		6F3E250118228C2500C5566B /* CocoaExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				A53145DE1BE21FBC0064D9C9 /* SwiftExtensions */,
 				6F3E252518228C8D00C5566B /* Categories */,
 				6FF65EA418C8770700A5A2B5 /* Controls */,
 				6F54019A19D449FF005222A6 /* Controllers */,
@@ -378,6 +382,22 @@
 			name = Controls;
 			sourceTree = "<group>";
 		};
+		A53145DE1BE21FBC0064D9C9 /* SwiftExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A53145E21BE220220064D9C9 /* Foundation */,
+			);
+			path = SwiftExtensions;
+			sourceTree = "<group>";
+		};
+		A53145E21BE220220064D9C9 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A53145E31BE220320064D9C9 /* StringExtension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -424,6 +444,7 @@
 		6F3E24F418228C2500C5566B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Promptus;
 			};
@@ -514,6 +535,7 @@
 				6FC5E1E71823A0CC00C15F70 /* UIImage+Extensions.m in Sources */,
 				6FC5E1EF1823A0CC00C15F70 /* UIView+Extensions.m in Sources */,
 				6F35B7C018CF474F0008F857 /* NSDecimalNumber+Extensions.m in Sources */,
+				A53145E41BE220320064D9C9 /* StringExtension.swift in Sources */,
 				6FC5E1F31823A0CC00C15F70 /* NSManagedObject+Extensions.m in Sources */,
 				6F65430B1926A47700BDC7A9 /* NSDictionary+Extensions.m in Sources */,
 				6F5401A219D44ABC005222A6 /* PPWebBrowserViewController.m in Sources */,
@@ -526,6 +548,7 @@
 			files = (
 				6FC5E1F21823A0CC00C15F70 /* NSFetchRequest+Extensions.m in Sources */,
 				6F10995218A2886D0026189C /* CoreDataManager.m in Sources */,
+				A53145E51BE220320064D9C9 /* StringExtension.swift in Sources */,
 				6FC5E1F61823A0CC00C15F70 /* NSManagedObjectContext+Extensions.m in Sources */,
 				6FC5E1F81823A0CC00C15F70 /* NSArray+Extensions.m in Sources */,
 				6F1C4F8618BCC80A005FC6DE /* NSNumber+Extensions.m in Sources */,
@@ -637,12 +660,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 082024DD44714D91A9DA3393 /* Pods.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DSTROOT = /tmp/CocoaExtensions.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaExtensions/CocoaExtensions-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -650,9 +676,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 082024DD44714D91A9DA3393 /* Pods.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DSTROOT = /tmp/CocoaExtensions.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaExtensions/CocoaExtensions-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -663,6 +691,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -675,7 +704,9 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "CocoaExtensionsTests/CocoaExtensionsTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -684,6 +715,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -692,6 +724,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaExtensions/CocoaExtensions-Prefix.pch";
 				INFOPLIST_FILE = "CocoaExtensionsTests/CocoaExtensionsTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
