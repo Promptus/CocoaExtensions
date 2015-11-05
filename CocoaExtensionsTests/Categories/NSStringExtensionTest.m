@@ -47,4 +47,10 @@
   XCTAssertEqualStrings([matches objectAtIndex:2], @"24325");
 }
 
+- (void)testTruncateEmptyStrings {
+    NSString *truncatedString = [@" , , test string" ce_truncateEmptyStringComponentsSeparatedByCharacter:@", "];
+    NSString *expectedString = @"test string";
+    XCTAssertEqualStrings(truncatedString, expectedString);
+}
+
 @end

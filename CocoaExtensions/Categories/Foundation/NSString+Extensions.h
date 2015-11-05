@@ -26,5 +26,6 @@
 
 - (NSString *)ce_urlStringUsingEncoding:(NSStringEncoding)encoding;
 - (NSString *)ce_removeAllWhiteSpaces;
+- (NSString *)ce_truncateEmptyStringComponentsSeparatedByCharacter:(NSString *)stringSeparator;
 
 @end

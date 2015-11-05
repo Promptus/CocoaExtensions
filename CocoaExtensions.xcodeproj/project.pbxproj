@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F102E731BE277AA0047CCB1 /* ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10995618A288830026189C /* ReachabilityManager.m */; settings = {ASSET_TAGS = (); }; };
 		6F10994718A273F90026189C /* ApplicationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10994618A273F90026189C /* ApplicationHelper.m */; };
 		6F10994818A273F90026189C /* ApplicationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10994618A273F90026189C /* ApplicationHelper.m */; };
 		6F10995118A2886D0026189C /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10994E18A2886D0026189C /* CoreDataManager.m */; };
 		6F10995218A2886D0026189C /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10994E18A2886D0026189C /* CoreDataManager.m */; };
 		6F10995718A288830026189C /* ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10995618A288830026189C /* ReachabilityManager.m */; };
-		6F10995818A288830026189C /* ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10995618A288830026189C /* ReachabilityManager.m */; };
 		6F1C4F8518BCC80A005FC6DE /* NSNumber+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8418BCC80A005FC6DE /* NSNumber+Extensions.m */; };
 		6F1C4F8618BCC80A005FC6DE /* NSNumber+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8418BCC80A005FC6DE /* NSNumber+Extensions.m */; };
 		6F1C4F8D18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C4F8C18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m */; };
@@ -23,7 +23,6 @@
 		6F3E250518228C2500C5566B /* CocoaExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6F3E250418228C2500C5566B /* CocoaExtensions.h */; };
 		6F3E250E18228C2500C5566B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E250D18228C2500C5566B /* XCTest.framework */; };
 		6F3E250F18228C2500C5566B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FF18228C2500C5566B /* Foundation.framework */; };
-		6F3E251418228C2500C5566B /* libCocoaExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3E24FC18228C2500C5566B /* libCocoaExtensions.a */; };
 		6F3E251A18228C2500C5566B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F3E251818228C2500C5566B /* InfoPlist.strings */; };
 		6F3E25381822B34300C5566B /* NSArrayExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E25371822B34300C5566B /* NSArrayExtensionsTest.m */; };
 		6F5401A219D44ABC005222A6 /* PPWebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5401A019D44ABC005222A6 /* PPWebBrowserViewController.m */; };
@@ -52,6 +51,7 @@
 		6FC5E1F81823A0CC00C15F70 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5E1E61823A0CC00C15F70 /* NSArray+Extensions.m */; };
 		6FF65EA018C872F900A5A2B5 /* UIButton+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF65E9F18C872F900A5A2B5 /* UIButton+Extensions.m */; };
 		6FF65EA318C8745100A5A2B5 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF65EA218C8745100A5A2B5 /* UIColor+Extensions.m */; };
+		76A4B6106086D1FE6FE365D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E09CF0123F9D49128357691E /* libPods.a */; };
 		C217432A3FED4296B14B1B62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E09CF0123F9D49128357691E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		082024DD44714D91A9DA3393 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		3FD91C2E51896B95F745490A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6F10994518A273F90026189C /* ApplicationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplicationHelper.h; path = Helpers/ApplicationHelper.h; sourceTree = "<group>"; };
 		6F10994618A273F90026189C /* ApplicationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicationHelper.m; path = Helpers/ApplicationHelper.m; sourceTree = "<group>"; };
 		6F10994D18A2886D0026189C /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = Managers/CoreDataManager.h; sourceTree = "<group>"; };
@@ -147,6 +147,7 @@
 		6FF65E9F18C872F900A5A2B5 /* UIButton+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extensions.m"; sourceTree = "<group>"; };
 		6FF65EA118C8745100A5A2B5 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
 		6FF65EA218C8745100A5A2B5 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
+		71A1F6601FC3AE6B7EBC3B6E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E09CF0123F9D49128357691E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,7 +169,7 @@
 				6FC5E1CB18239F0100C15F70 /* UIKit.framework in Frameworks */,
 				6F3E250E18228C2500C5566B /* XCTest.framework in Frameworks */,
 				6F3E250F18228C2500C5566B /* Foundation.framework in Frameworks */,
-				6F3E251418228C2500C5566B /* libCocoaExtensions.a in Frameworks */,
+				76A4B6106086D1FE6FE365D0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +204,7 @@
 				6F3E24FE18228C2500C5566B /* Frameworks */,
 				6F3E24FD18228C2500C5566B /* Products */,
 				6F7483BE18C9F077000D22D7 /* CocoaExtensions.podspec */,
-				082024DD44714D91A9DA3393 /* Pods.xcconfig */,
+				E3C1CA12796610E51A58623B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -378,6 +379,15 @@
 			name = Controls;
 			sourceTree = "<group>";
 		};
+		E3C1CA12796610E51A58623B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FD91C2E51896B95F745490A /* Pods.debug.xcconfig */,
+				71A1F6601FC3AE6B7EBC3B6E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -404,9 +414,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F3E252218228C2600C5566B /* Build configuration list for PBXNativeTarget "CocoaExtensionsTests" */;
 			buildPhases = (
+				EC0705DA9051D770338C305C /* Check Pods Manifest.lock */,
 				6F3E250818228C2500C5566B /* Sources */,
 				6F3E250918228C2500C5566B /* Frameworks */,
 				6F3E250A18228C2500C5566B /* Resources */,
+				B40D45665AB49606044B1B7A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -484,7 +496,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B40D45665AB49606044B1B7A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC0705DA9051D770338C305C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -530,7 +572,7 @@
 				6FC5E1F81823A0CC00C15F70 /* NSArray+Extensions.m in Sources */,
 				6F1C4F8618BCC80A005FC6DE /* NSNumber+Extensions.m in Sources */,
 				6F10994818A273F90026189C /* ApplicationHelper.m in Sources */,
-				6F10995818A288830026189C /* ReachabilityManager.m in Sources */,
+				6F102E731BE277AA0047CCB1 /* ReachabilityManager.m in Sources */,
 				6F1C4F8E18BCCA19005FC6DE /* NSFileManager+DirectoryLocations.m in Sources */,
 				6FB82DD818283D71000FC603 /* NSString+Extensions.m in Sources */,
 				6FB82DDA18283F0D000FC603 /* NSStringExtensionTest.m in Sources */,
@@ -635,12 +677,11 @@
 		};
 		6F3E252018228C2600C5566B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 082024DD44714D91A9DA3393 /* Pods.xcconfig */;
+			baseConfigurationReference = 3FD91C2E51896B95F745490A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/CocoaExtensions.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaExtensions/CocoaExtensions-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -648,12 +689,11 @@
 		};
 		6F3E252118228C2600C5566B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 082024DD44714D91A9DA3393 /* Pods.xcconfig */;
+			baseConfigurationReference = 71A1F6601FC3AE6B7EBC3B6E /* Pods.release.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/CocoaExtensions.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaExtensions/CocoaExtensions-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -661,6 +701,7 @@
 		};
 		6F3E252318228C2600C5566B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FD91C2E51896B95F745490A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -682,6 +723,7 @@
 		};
 		6F3E252418228C2600C5566B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71A1F6601FC3AE6B7EBC3B6E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
