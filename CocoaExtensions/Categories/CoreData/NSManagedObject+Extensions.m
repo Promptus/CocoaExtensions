@@ -10,11 +10,11 @@
 
 @implementation NSManagedObject (Extensions)
 
-+ (id)ce_create:(NSManagedObjectContext*)context {
++ (instancetype)ce_create:(NSManagedObjectContext*)context {
   return [NSEntityDescription insertNewObjectForEntityForName:[self ce_entityName] inManagedObjectContext:context];
 }
 
-+ (id)ce_create:(NSDictionary *)dict inContext:(NSManagedObjectContext*)context {
++ (instancetype)ce_create:(NSDictionary *)dict inContext:(NSManagedObjectContext*)context {
   id instance = [self ce_create:context];
   [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
     [instance setValue:obj forKey:key];
@@ -22,11 +22,11 @@
   return instance;
 }
 
-+ (id)ce_find:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
++ (instancetype)ce_find:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context {
   return [context ce_fetchObjectForEntity:[self ce_entityName] predicate:predicate];
 }
 
-+ (id)ce_find:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context {
++ (instancetype)ce_find:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context {
   return [context ce_fetchObjectForEntity:[self ce_entityName] predicate:predicate sortDescriptors:sortDescriptors];
 }
 

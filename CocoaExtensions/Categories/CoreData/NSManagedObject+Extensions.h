@@ -11,10 +11,10 @@
 
 @interface NSManagedObject (Extensions)
 
-+ (id)ce_create:(NSManagedObjectContext*)context;
-+ (id)ce_create:(NSDictionary *)dict inContext:(NSManagedObjectContext*)context;
-+ (id)ce_find:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context;
-+ (id)ce_find:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context;
++ (instancetype)ce_create:(NSManagedObjectContext*)context;
++ (instancetype)ce_create:(NSDictionary *)dict inContext:(NSManagedObjectContext*)context;
++ (instancetype)ce_find:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context;
++ (instancetype)ce_find:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context;
 + (NSArray*)ce_all:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context;
 + (NSArray*)ce_all:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors inContext:(NSManagedObjectContext *)context;
 + (NSUInteger)ce_count:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)contex;
