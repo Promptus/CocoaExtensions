@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F102E731BE277AA0047CCB1 /* ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10995618A288830026189C /* ReachabilityManager.m */; settings = {ASSET_TAGS = (); }; };
+		6F102E731BE277AA0047CCB1 /* ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10995618A288830026189C /* ReachabilityManager.m */; };
 		6F10994718A273F90026189C /* ApplicationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10994618A273F90026189C /* ApplicationHelper.m */; };
 		6F10994818A273F90026189C /* ApplicationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10994618A273F90026189C /* ApplicationHelper.m */; };
 		6F10995118A2886D0026189C /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10994E18A2886D0026189C /* CoreDataManager.m */; };
@@ -419,6 +419,7 @@
 				6F3E250918228C2500C5566B /* Frameworks */,
 				6F3E250A18228C2500C5566B /* Resources */,
 				B40D45665AB49606044B1B7A /* Copy Pods Resources */,
+				788EE86D9143453C1587ADD5 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -497,6 +498,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		788EE86D9143453C1587ADD5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B40D45665AB49606044B1B7A /* Copy Pods Resources */ = {

@@ -57,7 +57,7 @@
   
   NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
   if (coordinator != nil) {
-    managedObjectContext = [[NSManagedObjectContext alloc] init];
+    managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     managedObjectContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy;
     [managedObjectContext setPersistentStoreCoordinator:coordinator];
   }
