@@ -53,6 +53,7 @@
 		6FF65EA318C8745100A5A2B5 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF65EA218C8745100A5A2B5 /* UIColor+Extensions.m */; };
 		76A4B6106086D1FE6FE365D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E09CF0123F9D49128357691E /* libPods.a */; };
 		C217432A3FED4296B14B1B62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E09CF0123F9D49128357691E /* libPods.a */; };
+		E500963D1C5A6A90005266D0 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E500963C1C5A6A90005266D0 /* UIViewController+BackButtonHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,8 @@
 		6FF65EA218C8745100A5A2B5 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
 		71A1F6601FC3AE6B7EBC3B6E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E09CF0123F9D49128357691E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E500963B1C5A6A90005266D0 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		E500963C1C5A6A90005266D0 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +327,8 @@
 				6F2136231952D7C400BFA9B4 /* UIStoryboard+Extensions.m */,
 				6FC5E1DB1823A0CC00C15F70 /* UIView+Extensions.h */,
 				6FC5E1DC1823A0CC00C15F70 /* UIView+Extensions.m */,
+				E500963B1C5A6A90005266D0 /* UIViewController+BackButtonHandler.h */,
+				E500963C1C5A6A90005266D0 /* UIViewController+BackButtonHandler.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -562,6 +567,7 @@
 				6FF65EA018C872F900A5A2B5 /* UIButton+Extensions.m in Sources */,
 				6F10994718A273F90026189C /* ApplicationHelper.m in Sources */,
 				6F68B5E118DAEFF6000BCAA0 /* NumberPad.m in Sources */,
+				E500963D1C5A6A90005266D0 /* UIViewController+BackButtonHandler.m in Sources */,
 				6F10995718A288830026189C /* ReachabilityManager.m in Sources */,
 				6F10995118A2886D0026189C /* CoreDataManager.m in Sources */,
 				6F2136241952D7C400BFA9B4 /* UIStoryboard+Extensions.m in Sources */,

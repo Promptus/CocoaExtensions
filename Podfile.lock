@@ -1,5 +1,5 @@
 PODS:
-  - iCarousel (1.7.6)
+  - iCarousel (1.8.2)
   - Reachability (3.1.1)
 
 DEPENDENCIES:
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - Reachability (~> 3.1.1)
 
 SPEC CHECKSUMS:
-  iCarousel: ddd7f142c7c2f3429b0ce5fb8ea37f4a059394cd
+  iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
   Reachability: dd9aa4fb6667b9f787690a74f53cb7634ce99893
 
 COCOAPODS: 0.39.0
