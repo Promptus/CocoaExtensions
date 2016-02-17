@@ -54,6 +54,7 @@
 		76A4B6106086D1FE6FE365D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E09CF0123F9D49128357691E /* libPods.a */; };
 		C217432A3FED4296B14B1B62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E09CF0123F9D49128357691E /* libPods.a */; };
 		E500963D1C5A6A90005266D0 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E500963C1C5A6A90005266D0 /* UIViewController+BackButtonHandler.m */; };
+		E585B8871C74A4B90028C0A4 /* NSAttributedString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E585B8861C74A4B90028C0A4 /* NSAttributedString+Extensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,8 @@
 		E09CF0123F9D49128357691E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E500963B1C5A6A90005266D0 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		E500963C1C5A6A90005266D0 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		E585B8851C74A4B90028C0A4 /* NSAttributedString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Extensions.h"; sourceTree = "<group>"; };
+		E585B8861C74A4B90028C0A4 /* NSAttributedString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Extensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +364,8 @@
 				6F1C4F8418BCC80A005FC6DE /* NSNumber+Extensions.m */,
 				6FB82DD518283D71000FC603 /* NSString+Extensions.h */,
 				6FB82DD618283D71000FC603 /* NSString+Extensions.m */,
+				E585B8851C74A4B90028C0A4 /* NSAttributedString+Extensions.h */,
+				E585B8861C74A4B90028C0A4 /* NSAttributedString+Extensions.m */,
 				6F6542F919264A7E00BDC7A9 /* NSSet+Extensions.h */,
 				6F6542FA19264A7E00BDC7A9 /* NSSet+Extensions.m */,
 				6F6543091926A47700BDC7A9 /* NSDictionary+Extensions.h */,
@@ -566,6 +571,7 @@
 				6F1C4F8518BCC80A005FC6DE /* NSNumber+Extensions.m in Sources */,
 				6FF65EA018C872F900A5A2B5 /* UIButton+Extensions.m in Sources */,
 				6F10994718A273F90026189C /* ApplicationHelper.m in Sources */,
+				E585B8871C74A4B90028C0A4 /* NSAttributedString+Extensions.m in Sources */,
 				6F68B5E118DAEFF6000BCAA0 /* NumberPad.m in Sources */,
 				E500963D1C5A6A90005266D0 /* UIViewController+BackButtonHandler.m in Sources */,
 				6F10995718A288830026189C /* ReachabilityManager.m in Sources */,
